@@ -1,0 +1,156 @@
+Starting job on gcn147.local.snellius.surf.nl at Thu Jun 19 00:17:36 CEST 2025
+Total CPUs allocated: 16
+Number of CPUs allocated by Slurm=8
+[INFO] ROOT_DIR set to /gpfs/home5/jye/dse
+Using python: /gpfs/home5/jye/.venv/bin/python
+apptainer version 1.4.1-1.el9
+Thu Jun 19 00:17:38 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100                    On  |   00000000:26:00.0 Off |                    0 |
+| N/A   33C    P0             68W /  700W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking available executables inside Singularity:
+/sw/arch/RHEL8/EB_production/2023/software/cuDNN/8.9.2.26-CUDA-12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/nvvm/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/extras/CUPTI/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/Python/3.11.3-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/OpenSSL/3/lib:/sw/arch/RHEL8/EB_production/2023/software/libffi/3.4.4-GCCcore-12.3.0/lib64:/sw/arch/RHEL8/EB_production/2023/software/XZ/5.4.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/SQLite/3.42.0-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/Tcl/8.6.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/libreadline/8.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/ncurses/6.4-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/bzip2/1.0.8-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/binutils/2.40-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/zlib/1.2.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/GCCcore/12.3.0/lib64
+/usr/bin/ollama
+=================================================================
+Starting Experiment with:
+  RAG Model: deepseek-llm:7b
+  Story Model: deepseek-llm:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/06/19 - 00:17:44 | 200 |    7.205924ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/06/19 - 00:17:44 | 200 |       34.77µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:17:45 | 200 |  505.399704ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/06/19 - 00:17:45 | 200 |       32.29µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:17:45 | 200 |   34.705889ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/19 - 00:17:50 | 200 |  4.548303002s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: deepseek-llm:7b
+Job completed at Thu Jun 19 00:18:04 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: deepseek-llm:7b
+  Story Model: gemma:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/06/19 - 00:18:09 | 200 |    5.729871ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/06/19 - 00:18:09 | 200 |       34.19µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:18:10 | 200 |  511.102915ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/06/19 - 00:18:10 | 200 |       31.36µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:18:10 | 200 |   61.803425ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/19 - 00:18:16 | 200 |  5.732096134s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: deepseek-llm:7b
+Job completed at Thu Jun 19 00:18:23 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: deepseek-llm:7b
+  Story Model: qwen2.5:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/06/19 - 00:18:28 | 200 |    5.384814ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/06/19 - 00:18:28 | 200 |       35.34µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:18:28 | 200 |  467.349762ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/06/19 - 00:18:29 | 200 |       28.13µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:18:29 | 200 |   38.190321ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/19 - 00:18:34 | 200 |  5.086732192s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: deepseek-llm:7b
+Job completed at Thu Jun 19 00:18:41 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: deepseek-llm:7b
+  Story Model: openchat:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/06/19 - 00:18:46 | 200 |    5.124795ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/06/19 - 00:18:46 | 200 |       38.49µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:18:46 | 200 |  478.387006ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/06/19 - 00:18:47 | 200 |       26.73µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:18:47 | 200 |   16.773177ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/19 - 00:18:51 | 200 |  4.136373892s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: deepseek-llm:7b
+Job completed at Thu Jun 19 00:18:58 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: deepseek-llm:7b
+  Story Model: llama3.1:8b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/06/19 - 00:19:03 | 200 |      6.1177ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/06/19 - 00:19:03 | 200 |       35.22µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:19:04 | 200 |  536.927516ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/06/19 - 00:19:04 | 200 |        28.1µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:19:04 | 200 |   42.031872ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/19 - 00:19:09 | 200 |   5.13847416s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: deepseek-llm:7b
+Job completed at Thu Jun 19 00:19:16 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: deepseek-llm:7b
+  Story Model: olmo2:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/06/19 - 00:19:21 | 200 |    6.307329ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/06/19 - 00:19:22 | 200 |      39.889µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:19:22 | 200 |  484.007239ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/06/19 - 00:19:23 | 200 |       26.93µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:19:23 | 200 |   27.290045ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/19 - 00:19:27 | 200 |  4.505914079s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: deepseek-llm:7b
+Job completed at Thu Jun 19 00:19:34 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: deepseek-llm:7b
+  Story Model: phi4:14b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/06/19 - 00:19:39 | 200 |    4.485298ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/06/19 - 00:19:39 | 200 |        38.7µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:19:39 | 200 |  469.088138ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/06/19 - 00:19:40 | 200 |       27.79µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/19 - 00:19:40 | 200 |   28.746527ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/19 - 00:19:49 | 200 |  9.324857935s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: deepseek-llm:7b
+Job completed at Thu Jun 19 00:19:56 CEST 2025
+All jobs completed at Thu Jun 19 00:19:56 CEST 2025
+
+JOB STATISTICS
+==============
+Job ID: 12484190
+Cluster: snellius
+User/Group: jye/jye
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:01:49
+CPU Efficiency: 4.54% of 00:40:00 core-walltime
+Job Wall-clock time: 00:02:30
+Memory Utilized: 1.08 GB
+Memory Efficiency: 3.39% of 32.00 GB (32.00 GB/node)

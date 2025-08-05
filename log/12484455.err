@@ -1,0 +1,1418 @@
+FATAL:   Image file already exists: "ollama_latest.sif" - will not overwrite
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+time=2025-06-19T00:38:11.333+02:00 level=INFO source=routes.go:1234 msg="server config" env="map[CUDA_VISIBLE_DEVICES:0 GPU_DEVICE_ORDINAL:0 HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:4096 OLLAMA_DEBUG:INFO OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://0.0.0.0:11889 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY:cublas OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:4 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/home/jye/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES:0 http_proxy: https_proxy: no_proxy:]"
+time=2025-06-19T00:38:11.346+02:00 level=INFO source=images.go:479 msg="total blobs: 38"
+time=2025-06-19T00:38:11.347+02:00 level=INFO source=images.go:486 msg="total unused blobs removed: 0"
+time=2025-06-19T00:38:11.348+02:00 level=INFO source=routes.go:1287 msg="Listening on [::]:11889 (version 0.9.0)"
+time=2025-06-19T00:38:11.350+02:00 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+time=2025-06-19T00:38:12.057+02:00 level=INFO source=types.go:130 msg="inference compute" id=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc library=cuda variant=v12 compute=9.0 driver=12.7 name="NVIDIA H100" total="93.1 GiB" available="92.6 GiB"
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling 60cfdbde0472: 100% ▕██████████████████▏ 4.0 GB                         [K
+pulling d1c131da816c: 100% ▕██████████████████▏   45 B                         [K
+pulling a00920c28dfd: 100% ▕██████████████████▏   17 B                         [K
+pulling 46cdcbf69b1c: 100% ▕██████████████████▏  381 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026ltime=2025-06-19T00:38:17.555+02:00 level=INFO source=sched.go:788 msg="new model will fit in available VRAM in single GPU, loading" model=/home/jye/.ollama/models/blobs/sha256-60cfdbde0472c3b850493551288a152f0858a0d1974964d6925c2b908035db76 gpu=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc parallel=2 available=99425779712 required="8.5 GiB"
+[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026ltime=2025-06-19T00:38:17.824+02:00 level=INFO source=server.go:135 msg="system memory" total="755.6 GiB" free="725.5 GiB" free_swap="0 B"
+time=2025-06-19T00:38:17.825+02:00 level=INFO source=server.go:168 msg=offload library=cuda layers.requested=-1 layers.model=31 layers.offload=31 layers.split="" memory.available="[92.6 GiB]" memory.gpu_overhead="0 B" memory.required.full="8.5 GiB" memory.required.partial="8.5 GiB" memory.required.kv="3.8 GiB" memory.required.allocations="[8.5 GiB]" memory.weights.total="3.5 GiB" memory.weights.repeating="3.2 GiB" memory.weights.nonrepeating="328.1 MiB" memory.graph.full="560.0 MiB" memory.graph.partial="681.0 MiB"
+[?2026h[?25l[1G⠴ [K[?25h[?2026lllama_model_loader: loaded meta data with 24 key-value pairs and 273 tensors from /home/jye/.ollama/models/blobs/sha256-60cfdbde0472c3b850493551288a152f0858a0d1974964d6925c2b908035db76 (version GGUF V2)
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+llama_model_loader: - kv   2:                       llama.context_length u32              = 4096
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   4:                          llama.block_count u32              = 30
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 11008
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 32
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  10:                       llama.rope.freq_base f32              = 10000.000000
+llama_model_loader: - kv  11:                          general.file_type u32              = 2
+llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,102400]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  14:                      tokenizer.ggml.scores arr[f32,102400]  = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  15:                  tokenizer.ggml.token_type arr[i32,102400]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  16:                      tokenizer.ggml.merges arr[str,99757]   = ["Ġ Ġ", "Ġ t", "Ġ a", "i n", "h e...
+llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 100000
+llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 100001
+llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 100001
+llama_model_loader: - kv  20:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  21:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  22:                    tokenizer.chat_template str              = {% if not add_generation_prompt is de...
+llama_model_loader: - kv  23:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   61 tensors
+llama_model_loader: - type q4_0:  211 tensors
+llama_model_loader: - type q6_K:    1 tensors
+print_info: file format = GGUF V2
+print_info: file type   = Q4_0
+print_info: file size   = 3.72 GiB (4.63 BPW) 
+[?2026h[?25l[1G⠦ [K[?25h[?2026lload: missing or unrecognized pre-tokenizer type, using: 'default'
+load: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+load: special tokens cache size = 2400
+[?2026h[?25l[1G⠧ [K[?25h[?2026lload: token to piece cache size = 0.6681 MB
+print_info: arch             = llama
+print_info: vocab_only       = 1
+print_info: model type       = ?B
+print_info: model params     = 6.91 B
+print_info: general.name     = LLaMA v2
+print_info: vocab type       = BPE
+print_info: n_vocab          = 102400
+print_info: n_merges         = 99757
+print_info: BOS token        = 100000 '<｜begin▁of▁sentence｜>'
+print_info: EOS token        = 100001 '<｜end▁of▁sentence｜>'
+print_info: EOT token        = 100001 '<｜end▁of▁sentence｜>'
+print_info: PAD token        = 100001 '<｜end▁of▁sentence｜>'
+print_info: LF token         = 185 'Ċ'
+print_info: EOG token        = 100001 '<｜end▁of▁sentence｜>'
+print_info: max token length = 256
+llama_model_load: vocab only - skipping tensors
+time=2025-06-19T00:38:18.040+02:00 level=INFO source=server.go:431 msg="starting llama server" cmd="/usr/bin/ollama runner --model /home/jye/.ollama/models/blobs/sha256-60cfdbde0472c3b850493551288a152f0858a0d1974964d6925c2b908035db76 --ctx-size 8192 --batch-size 512 --n-gpu-layers 31 --threads 64 --parallel 2 --port 35683"
+time=2025-06-19T00:38:18.041+02:00 level=INFO source=sched.go:483 msg="loaded runners" count=1
+time=2025-06-19T00:38:18.041+02:00 level=INFO source=server.go:591 msg="waiting for llama runner to start responding"
+time=2025-06-19T00:38:18.041+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server not responding"
+time=2025-06-19T00:38:18.052+02:00 level=INFO source=runner.go:815 msg="starting go runner"
+load_backend: loaded CPU backend from /usr/lib/ollama/libggml-cpu-icelake.so
+[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026lggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA H100, compute capability 9.0, VMM: yes
+load_backend: loaded CUDA backend from /usr/lib/ollama/cuda_v12/libggml-cuda.so
+time=2025-06-19T00:38:18.523+02:00 level=INFO source=ggml.go:104 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.BMI2=1 CPU.0.AVX512=1 CPU.0.AVX512_VBMI=1 CPU.0.AVX512_VNNI=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 CUDA.0.ARCHS=500,600,610,700,750,800,860,870,890,900,1200 CUDA.0.USE_GRAPHS=1 CUDA.0.PEER_MAX_BATCH_SIZE=128 compiler=cgo(gcc)
+time=2025-06-19T00:38:18.524+02:00 level=INFO source=runner.go:874 msg="Server listening on 127.0.0.1:35683"
+[?2026h[?25l[1G⠹ [K[?25h[?2026ltime=2025-06-19T00:38:18.543+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server loading model"
+[?2026h[?25l[1G⠼ [K[?25h[?2026lllama_model_load_from_file_impl: using device CUDA0 (NVIDIA H100) - 94819 MiB free
+llama_model_loader: loaded meta data with 24 key-value pairs and 273 tensors from /home/jye/.ollama/models/blobs/sha256-60cfdbde0472c3b850493551288a152f0858a0d1974964d6925c2b908035db76 (version GGUF V2)
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+llama_model_loader: - kv   2:                       llama.context_length u32              = 4096
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   4:                          llama.block_count u32              = 30
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 11008
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 32
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  10:                       llama.rope.freq_base f32              = 10000.000000
+llama_model_loader: - kv  11:                          general.file_type u32              = 2
+llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,102400]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+[?2026h[?25l[1G⠼ [K[?25h[?2026lllama_model_loader: - kv  14:                      tokenizer.ggml.scores arr[f32,102400]  = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  15:                  tokenizer.ggml.token_type arr[i32,102400]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  16:                      tokenizer.ggml.merges arr[str,99757]   = ["Ġ Ġ", "Ġ t", "Ġ a", "i n", "h e...
+llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 100000
+llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 100001
+llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 100001
+llama_model_loader: - kv  20:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  21:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  22:                    tokenizer.chat_template str              = {% if not add_generation_prompt is de...
+llama_model_loader: - kv  23:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   61 tensors
+llama_model_loader: - type q4_0:  211 tensors
+llama_model_loader: - type q6_K:    1 tensors
+print_info: file format = GGUF V2
+print_info: file type   = Q4_0
+print_info: file size   = 3.72 GiB (4.63 BPW) 
+load: missing or unrecognized pre-tokenizer type, using: 'default'
+[?2026h[?25l[1G⠴ [K[?25h[?2026lload: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+load: special tokens cache size = 2400
+load: token to piece cache size = 0.6681 MB
+print_info: arch             = llama
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 4096
+print_info: n_embd           = 4096
+print_info: n_layer          = 30
+print_info: n_head           = 32
+print_info: n_head_kv        = 32
+print_info: n_rot            = 128
+print_info: n_swa            = 0
+print_info: n_swa_pattern    = 1
+print_info: n_embd_head_k    = 128
+print_info: n_embd_head_v    = 128
+print_info: n_gqa            = 1
+print_info: n_embd_k_gqa     = 4096
+print_info: n_embd_v_gqa     = 4096
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-06
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: f_attn_scale     = 0.0e+00
+print_info: n_ff             = 11008
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = 0
+print_info: rope type        = 0
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 10000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 4096
+print_info: rope_finetuned   = unknown
+print_info: ssm_d_conv       = 0
+print_info: ssm_d_inner      = 0
+print_info: ssm_d_state      = 0
+print_info: ssm_dt_rank      = 0
+print_info: ssm_dt_b_c_rms   = 0
+print_info: model type       = ?B
+print_info: model params     = 6.91 B
+print_info: general.name     = LLaMA v2
+print_info: vocab type       = BPE
+print_info: n_vocab          = 102400
+print_info: n_merges         = 99757
+print_info: BOS token        = 100000 '<｜begin▁of▁sentence｜>'
+print_info: EOS token        = 100001 '<｜end▁of▁sentence｜>'
+print_info: EOT token        = 100001 '<｜end▁of▁sentence｜>'
+print_info: PAD token        = 100001 '<｜end▁of▁sentence｜>'
+print_info: LF token         = 185 'Ċ'
+print_info: EOG token        = 100001 '<｜end▁of▁sentence｜>'
+print_info: max token length = 256
+load_tensors: loading model tensors, this can take a while... (mmap = true)
+[?2026h[?25l[1G⠦ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026lload_tensors: offloading 30 repeating layers to GPU
+load_tensors: offloading output layer to GPU
+load_tensors: offloaded 31/31 layers to GPU
+load_tensors:        CUDA0 model buffer size =  3585.96 MiB
+load_tensors:   CPU_Mapped model buffer size =   225.00 MiB
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026lllama_context: constructing llama_context
+llama_context: n_seq_max     = 2
+llama_context: n_ctx         = 8192
+llama_context: n_ctx_per_seq = 4096
+llama_context: n_batch       = 1024
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = 0
+llama_context: freq_base     = 10000.0
+llama_context: freq_scale    = 1
+llama_context:  CUDA_Host  output buffer size =     0.81 MiB
+llama_kv_cache_unified: kv_size = 8192, type_k = 'f16', type_v = 'f16', n_layer = 30, can_shift = 1, padding = 32
+llama_kv_cache_unified:      CUDA0 KV buffer size =  3840.00 MiB
+llama_kv_cache_unified: KV self size  = 3840.00 MiB, K (f16): 1920.00 MiB, V (f16): 1920.00 MiB
+llama_context:      CUDA0 compute buffer size =   560.00 MiB
+llama_context:  CUDA_Host compute buffer size =    24.01 MiB
+llama_context: graph nodes  = 1026
+llama_context: graph splits = 2
+[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026ltime=2025-06-19T00:38:19.798+02:00 level=INFO source=server.go:630 msg="llama runner started in 1.76 seconds"
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h[?25l[?25hINFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+time=2025-06-19T00:43:29.971+02:00 level=INFO source=routes.go:1234 msg="server config" env="map[CUDA_VISIBLE_DEVICES:0 GPU_DEVICE_ORDINAL:0 HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:4096 OLLAMA_DEBUG:INFO OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://0.0.0.0:11889 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY:cublas OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:4 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/home/jye/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES:0 http_proxy: https_proxy: no_proxy:]"
+time=2025-06-19T00:43:29.983+02:00 level=INFO source=images.go:479 msg="total blobs: 38"
+time=2025-06-19T00:43:29.984+02:00 level=INFO source=images.go:486 msg="total unused blobs removed: 0"
+time=2025-06-19T00:43:29.985+02:00 level=INFO source=routes.go:1287 msg="Listening on [::]:11889 (version 0.9.0)"
+time=2025-06-19T00:43:29.987+02:00 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+time=2025-06-19T00:43:30.519+02:00 level=INFO source=types.go:130 msg="inference compute" id=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc library=cuda variant=v12 compute=9.0 driver=12.7 name="NVIDIA H100" total="93.1 GiB" available="92.6 GiB"
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠼ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling ef311de6af9d: 100% ▕██████████████████▏ 5.0 GB                         [K
+pulling 097a36493f71: 100% ▕██████████████████▏ 8.4 KB                         [K
+pulling 109037bec39c: 100% ▕██████████████████▏  136 B                         [K
+pulling 65bb16cf5983: 100% ▕██████████████████▏  109 B                         [K
+pulling 0c2a5137eb3c: 100% ▕██████████████████▏  483 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+time=2025-06-19T00:43:35.785+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026ltime=2025-06-19T00:43:36.110+02:00 level=INFO source=sched.go:788 msg="new model will fit in available VRAM in single GPU, loading" model=/home/jye/.ollama/models/blobs/sha256-ef311de6af9db043d51ca4b1e766c28e0a1ac41d60420fed5e001dc470c64b77 gpu=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc parallel=2 available=99425779712 required="9.4 GiB"
+[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠦ [K[?25h[?2026ltime=2025-06-19T00:43:36.378+02:00 level=INFO source=server.go:135 msg="system memory" total="755.6 GiB" free="725.6 GiB" free_swap="0 B"
+time=2025-06-19T00:43:36.379+02:00 level=INFO source=server.go:168 msg=offload library=cuda layers.requested=-1 layers.model=29 layers.offload=29 layers.split="" memory.available="[92.6 GiB]" memory.gpu_overhead="0 B" memory.required.full="9.4 GiB" memory.required.partial="9.4 GiB" memory.required.kv="3.5 GiB" memory.required.allocations="[9.4 GiB]" memory.weights.total="4.7 GiB" memory.weights.repeating="4.1 GiB" memory.weights.nonrepeating="615.2 MiB" memory.graph.full="506.0 MiB" memory.graph.partial="1.1 GiB"
+llama_model_loader: loaded meta data with 24 key-value pairs and 254 tensors from /home/jye/.ollama/models/blobs/sha256-ef311de6af9db043d51ca4b1e766c28e0a1ac41d60420fed5e001dc470c64b77 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = gemma
+llama_model_loader: - kv   1:                               general.name str              = gemma-1.1-7b-it
+llama_model_loader: - kv   2:                       gemma.context_length u32              = 8192
+llama_model_loader: - kv   3:                     gemma.embedding_length u32              = 3072
+llama_model_loader: - kv   4:                          gemma.block_count u32              = 28
+llama_model_loader: - kv   5:                  gemma.feed_forward_length u32              = 24576
+llama_model_loader: - kv   6:                 gemma.attention.head_count u32              = 16
+llama_model_loader: - kv   7:              gemma.attention.head_count_kv u32              = 16
+llama_model_loader: - kv   8:     gemma.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv   9:                 gemma.attention.key_length u32              = 256
+llama_model_loader: - kv  10:               gemma.attention.value_length u32              = 256
+llama_model_loader: - kv  11:                          general.file_type u32              = 2
+llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = llama
+[?2026h[?25l[1G⠧ [K[?25h[?2026lllama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,256000]  = ["<pad>", "<eos>", "<bos>", "<unk>", ...
+llama_model_loader: - kv  14:                      tokenizer.ggml.scores arr[f32,256000]  = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  15:                  tokenizer.ggml.token_type arr[i32,256000]  = [3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 2
+llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 1
+llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 3
+llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 0
+llama_model_loader: - kv  20:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  21:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  22:                    tokenizer.chat_template str              = {{ bos_token }}{% if messages[0]['rol...
+llama_model_loader: - kv  23:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   57 tensors
+llama_model_loader: - type q4_0:  196 tensors
+llama_model_loader: - type q6_K:    1 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_0
+print_info: file size   = 4.66 GiB (4.69 BPW) 
+[?2026h[?25l[1G⠇ [K[?25h[?2026lload: control-looking token:    107 '<end_of_turn>' was not control-type; this is probably a bug in the model. its type will be overridden
+[?2026h[?25l[1G⠇ [K[?25h[?2026lload: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+load: special tokens cache size = 5
+load: token to piece cache size = 1.6014 MB
+print_info: arch             = gemma
+print_info: vocab_only       = 1
+print_info: model type       = ?B
+print_info: model params     = 8.54 B
+print_info: general.name     = gemma-1.1-7b-it
+print_info: vocab type       = SPM
+print_info: n_vocab          = 256000
+print_info: n_merges         = 0
+print_info: BOS token        = 2 '<bos>'
+print_info: EOS token        = 1 '<eos>'
+print_info: EOT token        = 107 '<end_of_turn>'
+print_info: UNK token        = 3 '<unk>'
+print_info: PAD token        = 0 '<pad>'
+print_info: LF token         = 227 '<0x0A>'
+print_info: EOG token        = 1 '<eos>'
+print_info: EOG token        = 107 '<end_of_turn>'
+print_info: max token length = 93
+llama_model_load: vocab only - skipping tensors
+time=2025-06-19T00:43:36.739+02:00 level=INFO source=server.go:431 msg="starting llama server" cmd="/usr/bin/ollama runner --model /home/jye/.ollama/models/blobs/sha256-ef311de6af9db043d51ca4b1e766c28e0a1ac41d60420fed5e001dc470c64b77 --ctx-size 8192 --batch-size 512 --n-gpu-layers 29 --threads 64 --parallel 2 --port 40277"
+time=2025-06-19T00:43:36.739+02:00 level=INFO source=sched.go:483 msg="loaded runners" count=1
+time=2025-06-19T00:43:36.739+02:00 level=INFO source=server.go:591 msg="waiting for llama runner to start responding"
+time=2025-06-19T00:43:36.740+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server not responding"
+time=2025-06-19T00:43:36.749+02:00 level=INFO source=runner.go:815 msg="starting go runner"
+[?2026h[?25l[1G⠋ [K[?25h[?2026lload_backend: loaded CPU backend from /usr/lib/ollama/libggml-cpu-icelake.so
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026lggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA H100, compute capability 9.0, VMM: yes
+load_backend: loaded CUDA backend from /usr/lib/ollama/cuda_v12/libggml-cuda.so
+time=2025-06-19T00:43:37.215+02:00 level=INFO source=ggml.go:104 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.BMI2=1 CPU.0.AVX512=1 CPU.0.AVX512_VBMI=1 CPU.0.AVX512_VNNI=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 CUDA.0.ARCHS=500,600,610,700,750,800,860,870,890,900,1200 CUDA.0.USE_GRAPHS=1 CUDA.0.PEER_MAX_BATCH_SIZE=128 compiler=cgo(gcc)
+time=2025-06-19T00:43:37.216+02:00 level=INFO source=runner.go:874 msg="Server listening on 127.0.0.1:40277"
+time=2025-06-19T00:43:37.242+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server loading model"
+[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠦ [K[?25h[?2026lllama_model_load_from_file_impl: using device CUDA0 (NVIDIA H100) - 94819 MiB free
+llama_model_loader: loaded meta data with 24 key-value pairs and 254 tensors from /home/jye/.ollama/models/blobs/sha256-ef311de6af9db043d51ca4b1e766c28e0a1ac41d60420fed5e001dc470c64b77 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = gemma
+llama_model_loader: - kv   1:                               general.name str              = gemma-1.1-7b-it
+llama_model_loader: - kv   2:                       gemma.context_length u32              = 8192
+llama_model_loader: - kv   3:                     gemma.embedding_length u32              = 3072
+llama_model_loader: - kv   4:                          gemma.block_count u32              = 28
+llama_model_loader: - kv   5:                  gemma.feed_forward_length u32              = 24576
+llama_model_loader: - kv   6:                 gemma.attention.head_count u32              = 16
+llama_model_loader: - kv   7:              gemma.attention.head_count_kv u32              = 16
+llama_model_loader: - kv   8:     gemma.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv   9:                 gemma.attention.key_length u32              = 256
+llama_model_loader: - kv  10:               gemma.attention.value_length u32              = 256
+llama_model_loader: - kv  11:                          general.file_type u32              = 2
+llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,256000]  = ["<pad>", "<eos>", "<bos>", "<unk>", ...
+[?2026h[?25l[1G⠦ [K[?25h[?2026lllama_model_loader: - kv  14:                      tokenizer.ggml.scores arr[f32,256000]  = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  15:                  tokenizer.ggml.token_type arr[i32,256000]  = [3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 2
+llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 1
+llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 3
+llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 0
+llama_model_loader: - kv  20:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  21:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  22:                    tokenizer.chat_template str              = {{ bos_token }}{% if messages[0]['rol...
+llama_model_loader: - kv  23:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   57 tensors
+llama_model_loader: - type q4_0:  196 tensors
+llama_model_loader: - type q6_K:    1 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_0
+print_info: file size   = 4.66 GiB (4.69 BPW) 
+[?2026h[?25l[1G⠧ [K[?25h[?2026lload: control-looking token:    107 '<end_of_turn>' was not control-type; this is probably a bug in the model. its type will be overridden
+[?2026h[?25l[1G⠏ [K[?25h[?2026lload: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+load: special tokens cache size = 5
+load: token to piece cache size = 1.6014 MB
+print_info: arch             = gemma
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 8192
+print_info: n_embd           = 3072
+print_info: n_layer          = 28
+print_info: n_head           = 16
+print_info: n_head_kv        = 16
+print_info: n_rot            = 256
+print_info: n_swa            = 0
+print_info: n_swa_pattern    = 1
+print_info: n_embd_head_k    = 256
+print_info: n_embd_head_v    = 256
+print_info: n_gqa            = 1
+print_info: n_embd_k_gqa     = 4096
+print_info: n_embd_v_gqa     = 4096
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-06
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: f_attn_scale     = 0.0e+00
+print_info: n_ff             = 24576
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = 0
+print_info: rope type        = 2
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 10000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 8192
+print_info: rope_finetuned   = unknown
+print_info: ssm_d_conv       = 0
+print_info: ssm_d_inner      = 0
+print_info: ssm_d_state      = 0
+print_info: ssm_dt_rank      = 0
+print_info: ssm_dt_b_c_rms   = 0
+print_info: model type       = 7B
+print_info: model params     = 8.54 B
+print_info: general.name     = gemma-1.1-7b-it
+print_info: vocab type       = SPM
+print_info: n_vocab          = 256000
+print_info: n_merges         = 0
+print_info: BOS token        = 2 '<bos>'
+print_info: EOS token        = 1 '<eos>'
+print_info: EOT token        = 107 '<end_of_turn>'
+print_info: UNK token        = 3 '<unk>'
+print_info: PAD token        = 0 '<pad>'
+print_info: LF token         = 227 '<0x0A>'
+print_info: EOG token        = 1 '<eos>'
+print_info: EOG token        = 107 '<end_of_turn>'
+print_info: max token length = 93
+load_tensors: loading model tensors, this can take a while... (mmap = true)
+[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026lload_tensors: offloading 28 repeating layers to GPU
+load_tensors: offloading output layer to GPU
+load_tensors: offloaded 29/29 layers to GPU
+load_tensors:        CUDA0 model buffer size =  4773.90 MiB
+load_tensors:   CPU_Mapped model buffer size =   615.23 MiB
+[?2026h[?25l[1G⠦ [K[?25h[?2026l[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠧ [K[?25h[?2026lllama_context: constructing llama_context
+llama_context: n_seq_max     = 2
+llama_context: n_ctx         = 8192
+llama_context: n_ctx_per_seq = 4096
+llama_context: n_batch       = 1024
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = 0
+llama_context: freq_base     = 10000.0
+llama_context: freq_scale    = 1
+llama_context: n_ctx_per_seq (4096) < n_ctx_train (8192) -- the full capacity of the model will not be utilized
+llama_context:  CUDA_Host  output buffer size =     1.98 MiB
+llama_kv_cache_unified: kv_size = 8192, type_k = 'f16', type_v = 'f16', n_layer = 28, can_shift = 1, padding = 32
+llama_kv_cache_unified:      CUDA0 KV buffer size =  3584.00 MiB
+llama_kv_cache_unified: KV self size  = 3584.00 MiB, K (f16): 1792.00 MiB, V (f16): 1792.00 MiB
+llama_context:      CUDA0 compute buffer size =   506.00 MiB
+llama_context:  CUDA_Host compute buffer size =    22.01 MiB
+llama_context: graph nodes  = 987
+llama_context: graph splits = 2
+[?2026h[?25l[1G⠇ [K[?25h[?2026ltime=2025-06-19T00:43:38.748+02:00 level=INFO source=server.go:630 msg="llama runner started in 2.01 seconds"
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h[?25l[?25htime=2025-06-19T00:43:45.477+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:43:47.043+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:43:48.292+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:43:49.531+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:43:50.349+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:43:51.189+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:43:54.232+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:43:57.295+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:43:58.427+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:43:59.487+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:00.333+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:01.159+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:02.139+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:05.426+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:07.513+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:08.664+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:09.587+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:10.452+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:11.449+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:12.239+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:15.210+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:18.047+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:19.173+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:19.982+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:20.876+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:21.561+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:22.154+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:24.588+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:27.294+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:28.376+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:29.292+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:30.495+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:31.257+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:31.779+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:34.411+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:36.636+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:37.750+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:38.461+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:39.421+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:40.445+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:41.266+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:44.196+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:47.196+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:48.271+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:49.211+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:49.784+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:50.702+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:51.356+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:53.824+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:57.100+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:58.195+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:44:59.383+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:00.380+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:01.538+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:02.299+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:05.984+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:08.068+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:09.127+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:10.122+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:10.931+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:11.792+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:12.607+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:14.876+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:17.195+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:18.226+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:19.016+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:19.875+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:20.929+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:21.908+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:25.176+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:28.009+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:28.962+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:29.914+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:30.715+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:31.601+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:32.184+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:34.525+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:37.311+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:38.401+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:39.384+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:39.993+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:40.949+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:41.655+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:44.629+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:47.107+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:48.246+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:49.131+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:49.933+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:50.920+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:51.775+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:54.591+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:56.733+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:57.851+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:58.728+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:45:59.514+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:00.489+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:01.440+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:04.575+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:06.697+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:07.865+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:08.995+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:09.638+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:10.650+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:11.390+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:14.228+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:17.347+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:18.431+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:19.446+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:20.221+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:21.179+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:22.116+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:24.783+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:27.187+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:28.239+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:29.067+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:29.690+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:30.254+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:31.133+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:33.937+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:36.502+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:37.524+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:38.390+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:38.982+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:40.077+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:41.073+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:43.428+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:46.012+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:47.127+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:48.198+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:49.196+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:50.069+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:50.783+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:52.547+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:55.348+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:56.437+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:57.189+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:57.964+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:58.951+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:46:59.838+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+time=2025-06-19T00:47:02.488+02:00 level=WARN source=types.go:572 msg="invalid option provided" option=penalize_newline
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+time=2025-06-19T00:47:06.146+02:00 level=INFO source=routes.go:1234 msg="server config" env="map[CUDA_VISIBLE_DEVICES:0 GPU_DEVICE_ORDINAL:0 HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:4096 OLLAMA_DEBUG:INFO OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://0.0.0.0:11889 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY:cublas OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:4 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/home/jye/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES:0 http_proxy: https_proxy: no_proxy:]"
+time=2025-06-19T00:47:06.157+02:00 level=INFO source=images.go:479 msg="total blobs: 38"
+time=2025-06-19T00:47:06.158+02:00 level=INFO source=images.go:486 msg="total unused blobs removed: 0"
+time=2025-06-19T00:47:06.159+02:00 level=INFO source=routes.go:1287 msg="Listening on [::]:11889 (version 0.9.0)"
+time=2025-06-19T00:47:06.161+02:00 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+time=2025-06-19T00:47:06.712+02:00 level=INFO source=types.go:130 msg="inference compute" id=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc library=cuda variant=v12 compute=9.0 driver=12.7 name="NVIDIA H100" total="93.1 GiB" available="92.6 GiB"
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling 2bada8a74506: 100% ▕██████████████████▏ 4.7 GB                         [K
+pulling 66b9ea09bd5b: 100% ▕██████████████████▏   68 B                         [K
+pulling eb4402837c78: 100% ▕██████████████████▏ 1.5 KB                         [K
+pulling 832dd9e00a68: 100% ▕██████████████████▏  11 KB                         [K
+pulling 2f15b3218f05: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026ltime=2025-06-19T00:47:12.339+02:00 level=INFO source=sched.go:788 msg="new model will fit in available VRAM in single GPU, loading" model=/home/jye/.ollama/models/blobs/sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730 gpu=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc parallel=2 available=99425779712 required="5.6 GiB"
+[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026ltime=2025-06-19T00:47:12.606+02:00 level=INFO source=server.go:135 msg="system memory" total="755.6 GiB" free="725.6 GiB" free_swap="0 B"
+time=2025-06-19T00:47:12.607+02:00 level=INFO source=server.go:168 msg=offload library=cuda layers.requested=-1 layers.model=29 layers.offload=29 layers.split="" memory.available="[92.6 GiB]" memory.gpu_overhead="0 B" memory.required.full="5.6 GiB" memory.required.partial="5.6 GiB" memory.required.kv="448.0 MiB" memory.required.allocations="[5.6 GiB]" memory.weights.total="4.1 GiB" memory.weights.repeating="3.7 GiB" memory.weights.nonrepeating="426.4 MiB" memory.graph.full="478.0 MiB" memory.graph.partial="730.4 MiB"
+[?2026h[?25l[1G⠦ [K[?25h[?2026lllama_model_loader: loaded meta data with 34 key-value pairs and 339 tensors from /home/jye/.ollama/models/blobs/sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = qwen2
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Qwen2.5 7B Instruct
+llama_model_loader: - kv   3:                           general.finetune str              = Instruct
+llama_model_loader: - kv   4:                           general.basename str              = Qwen2.5
+llama_model_loader: - kv   5:                         general.size_label str              = 7B
+llama_model_loader: - kv   6:                            general.license str              = apache-2.0
+llama_model_loader: - kv   7:                       general.license.link str              = https://huggingface.co/Qwen/Qwen2.5-7...
+llama_model_loader: - kv   8:                   general.base_model.count u32              = 1
+llama_model_loader: - kv   9:                  general.base_model.0.name str              = Qwen2.5 7B
+llama_model_loader: - kv  10:          general.base_model.0.organization str              = Qwen
+llama_model_loader: - kv  11:              general.base_model.0.repo_url str              = https://huggingface.co/Qwen/Qwen2.5-7B
+llama_model_loader: - kv  12:                               general.tags arr[str,2]       = ["chat", "text-generation"]
+llama_model_loader: - kv  13:                          general.languages arr[str,1]       = ["en"]
+llama_model_loader: - kv  14:                          qwen2.block_count u32              = 28
+llama_model_loader: - kv  15:                       qwen2.context_length u32              = 32768
+llama_model_loader: - kv  16:                     qwen2.embedding_length u32              = 3584
+llama_model_loader: - kv  17:                  qwen2.feed_forward_length u32              = 18944
+llama_model_loader: - kv  18:                 qwen2.attention.head_count u32              = 28
+llama_model_loader: - kv  19:              qwen2.attention.head_count_kv u32              = 4
+llama_model_loader: - kv  20:                       qwen2.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  21:     qwen2.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  22:                          general.file_type u32              = 15
+llama_model_loader: - kv  23:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  24:                         tokenizer.ggml.pre str              = qwen2
+llama_model_loader: - kv  25:                      tokenizer.ggml.tokens arr[str,152064]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  26:                  tokenizer.ggml.token_type arr[i32,152064]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  27:                      tokenizer.ggml.merges arr[str,151387]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  28:                tokenizer.ggml.eos_token_id u32              = 151645
+llama_model_loader: - kv  29:            tokenizer.ggml.padding_token_id u32              = 151643
+llama_model_loader: - kv  30:                tokenizer.ggml.bos_token_id u32              = 151643
+llama_model_loader: - kv  31:               tokenizer.ggml.add_bos_token bool             = false
+llama_model_loader: - kv  32:                    tokenizer.chat_template str              = {%- if tools %}\n    {{- '<|im_start|>...
+llama_model_loader: - kv  33:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:  141 tensors
+llama_model_loader: - type q4_K:  169 tensors
+llama_model_loader: - type q6_K:   29 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.36 GiB (4.91 BPW) 
+[?2026h[?25l[1G⠧ [K[?25h[?2026lload: special tokens cache size = 22
+[?2026h[?25l[1G⠇ [K[?25h[?2026lload: token to piece cache size = 0.9310 MB
+print_info: arch             = qwen2
+print_info: vocab_only       = 1
+print_info: model type       = ?B
+print_info: model params     = 7.62 B
+print_info: general.name     = Qwen2.5 7B Instruct
+print_info: vocab type       = BPE
+print_info: n_vocab          = 152064
+print_info: n_merges         = 151387
+print_info: BOS token        = 151643 '<|endoftext|>'
+print_info: EOS token        = 151645 '<|im_end|>'
+print_info: EOT token        = 151645 '<|im_end|>'
+print_info: PAD token        = 151643 '<|endoftext|>'
+print_info: LF token         = 198 'Ċ'
+print_info: FIM PRE token    = 151659 '<|fim_prefix|>'
+print_info: FIM SUF token    = 151661 '<|fim_suffix|>'
+print_info: FIM MID token    = 151660 '<|fim_middle|>'
+print_info: FIM PAD token    = 151662 '<|fim_pad|>'
+print_info: FIM REP token    = 151663 '<|repo_name|>'
+print_info: FIM SEP token    = 151664 '<|file_sep|>'
+print_info: EOG token        = 151643 '<|endoftext|>'
+print_info: EOG token        = 151645 '<|im_end|>'
+print_info: EOG token        = 151662 '<|fim_pad|>'
+print_info: EOG token        = 151663 '<|repo_name|>'
+print_info: EOG token        = 151664 '<|file_sep|>'
+print_info: max token length = 256
+llama_model_load: vocab only - skipping tensors
+time=2025-06-19T00:47:12.847+02:00 level=INFO source=server.go:431 msg="starting llama server" cmd="/usr/bin/ollama runner --model /home/jye/.ollama/models/blobs/sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730 --ctx-size 8192 --batch-size 512 --n-gpu-layers 29 --threads 64 --parallel 2 --port 44737"
+time=2025-06-19T00:47:12.848+02:00 level=INFO source=sched.go:483 msg="loaded runners" count=1
+time=2025-06-19T00:47:12.848+02:00 level=INFO source=server.go:591 msg="waiting for llama runner to start responding"
+time=2025-06-19T00:47:12.848+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server not responding"
+time=2025-06-19T00:47:12.858+02:00 level=INFO source=runner.go:815 msg="starting go runner"
+load_backend: loaded CPU backend from /usr/lib/ollama/libggml-cpu-icelake.so
+[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026lggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA H100, compute capability 9.0, VMM: yes
+load_backend: loaded CUDA backend from /usr/lib/ollama/cuda_v12/libggml-cuda.so
+time=2025-06-19T00:47:13.299+02:00 level=INFO source=ggml.go:104 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.BMI2=1 CPU.0.AVX512=1 CPU.0.AVX512_VBMI=1 CPU.0.AVX512_VNNI=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 CUDA.0.ARCHS=500,600,610,700,750,800,860,870,890,900,1200 CUDA.0.USE_GRAPHS=1 CUDA.0.PEER_MAX_BATCH_SIZE=128 compiler=cgo(gcc)
+time=2025-06-19T00:47:13.300+02:00 level=INFO source=runner.go:874 msg="Server listening on 127.0.0.1:44737"
+[?2026h[?25l[1G⠸ [K[?25h[?2026ltime=2025-06-19T00:47:13.350+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server loading model"
+[?2026h[?25l[1G⠼ [K[?25h[?2026lllama_model_load_from_file_impl: using device CUDA0 (NVIDIA H100) - 94819 MiB free
+llama_model_loader: loaded meta data with 34 key-value pairs and 339 tensors from /home/jye/.ollama/models/blobs/sha256-2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = qwen2
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Qwen2.5 7B Instruct
+llama_model_loader: - kv   3:                           general.finetune str              = Instruct
+llama_model_loader: - kv   4:                           general.basename str              = Qwen2.5
+llama_model_loader: - kv   5:                         general.size_label str              = 7B
+llama_model_loader: - kv   6:                            general.license str              = apache-2.0
+llama_model_loader: - kv   7:                       general.license.link str              = https://huggingface.co/Qwen/Qwen2.5-7...
+llama_model_loader: - kv   8:                   general.base_model.count u32              = 1
+llama_model_loader: - kv   9:                  general.base_model.0.name str              = Qwen2.5 7B
+llama_model_loader: - kv  10:          general.base_model.0.organization str              = Qwen
+llama_model_loader: - kv  11:              general.base_model.0.repo_url str              = https://huggingface.co/Qwen/Qwen2.5-7B
+llama_model_loader: - kv  12:                               general.tags arr[str,2]       = ["chat", "text-generation"]
+llama_model_loader: - kv  13:                          general.languages arr[str,1]       = ["en"]
+llama_model_loader: - kv  14:                          qwen2.block_count u32              = 28
+llama_model_loader: - kv  15:                       qwen2.context_length u32              = 32768
+llama_model_loader: - kv  16:                     qwen2.embedding_length u32              = 3584
+llama_model_loader: - kv  17:                  qwen2.feed_forward_length u32              = 18944
+llama_model_loader: - kv  18:                 qwen2.attention.head_count u32              = 28
+llama_model_loader: - kv  19:              qwen2.attention.head_count_kv u32              = 4
+llama_model_loader: - kv  20:                       qwen2.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  21:     qwen2.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  22:                          general.file_type u32              = 15
+llama_model_loader: - kv  23:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  24:                         tokenizer.ggml.pre str              = qwen2
+llama_model_loader: - kv  25:                      tokenizer.ggml.tokens arr[str,152064]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+[?2026h[?25l[1G⠴ [K[?25h[?2026lllama_model_loader: - kv  26:                  tokenizer.ggml.token_type arr[i32,152064]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  27:                      tokenizer.ggml.merges arr[str,151387]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  28:                tokenizer.ggml.eos_token_id u32              = 151645
+llama_model_loader: - kv  29:            tokenizer.ggml.padding_token_id u32              = 151643
+llama_model_loader: - kv  30:                tokenizer.ggml.bos_token_id u32              = 151643
+llama_model_loader: - kv  31:               tokenizer.ggml.add_bos_token bool             = false
+llama_model_loader: - kv  32:                    tokenizer.chat_template str              = {%- if tools %}\n    {{- '<|im_start|>...
+llama_model_loader: - kv  33:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:  141 tensors
+llama_model_loader: - type q4_K:  169 tensors
+llama_model_loader: - type q6_K:   29 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.36 GiB (4.91 BPW) 
+[?2026h[?25l[1G⠦ [K[?25h[?2026lload: special tokens cache size = 22
+load: token to piece cache size = 0.9310 MB
+print_info: arch             = qwen2
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 32768
+print_info: n_embd           = 3584
+print_info: n_layer          = 28
+print_info: n_head           = 28
+print_info: n_head_kv        = 4
+print_info: n_rot            = 128
+print_info: n_swa            = 0
+print_info: n_swa_pattern    = 1
+print_info: n_embd_head_k    = 128
+print_info: n_embd_head_v    = 128
+print_info: n_gqa            = 7
+print_info: n_embd_k_gqa     = 512
+print_info: n_embd_v_gqa     = 512
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-06
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: f_attn_scale     = 0.0e+00
+print_info: n_ff             = 18944
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = -1
+print_info: rope type        = 2
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 1000000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 32768
+print_info: rope_finetuned   = unknown
+print_info: ssm_d_conv       = 0
+print_info: ssm_d_inner      = 0
+print_info: ssm_d_state      = 0
+print_info: ssm_dt_rank      = 0
+print_info: ssm_dt_b_c_rms   = 0
+print_info: model type       = 7B
+print_info: model params     = 7.62 B
+print_info: general.name     = Qwen2.5 7B Instruct
+print_info: vocab type       = BPE
+print_info: n_vocab          = 152064
+print_info: n_merges         = 151387
+print_info: BOS token        = 151643 '<|endoftext|>'
+print_info: EOS token        = 151645 '<|im_end|>'
+print_info: EOT token        = 151645 '<|im_end|>'
+print_info: PAD token        = 151643 '<|endoftext|>'
+print_info: LF token         = 198 'Ċ'
+print_info: FIM PRE token    = 151659 '<|fim_prefix|>'
+print_info: FIM SUF token    = 151661 '<|fim_suffix|>'
+print_info: FIM MID token    = 151660 '<|fim_middle|>'
+print_info: FIM PAD token    = 151662 '<|fim_pad|>'
+print_info: FIM REP token    = 151663 '<|repo_name|>'
+print_info: FIM SEP token    = 151664 '<|file_sep|>'
+print_info: EOG token        = 151643 '<|endoftext|>'
+print_info: EOG token        = 151645 '<|im_end|>'
+print_info: EOG token        = 151662 '<|fim_pad|>'
+print_info: EOG token        = 151663 '<|repo_name|>'
+print_info: EOG token        = 151664 '<|file_sep|>'
+print_info: max token length = 256
+load_tensors: loading model tensors, this can take a while... (mmap = true)
+[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026lload_tensors: offloading 28 repeating layers to GPU
+load_tensors: offloading output layer to GPU
+load_tensors: offloaded 29/29 layers to GPU
+load_tensors:        CUDA0 model buffer size =  4168.09 MiB
+load_tensors:   CPU_Mapped model buffer size =   292.36 MiB
+[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026lllama_context: constructing llama_context
+llama_context: n_seq_max     = 2
+llama_context: n_ctx         = 8192
+llama_context: n_ctx_per_seq = 4096
+llama_context: n_batch       = 1024
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = 0
+llama_context: freq_base     = 1000000.0
+llama_context: freq_scale    = 1
+llama_context: n_ctx_per_seq (4096) < n_ctx_train (32768) -- the full capacity of the model will not be utilized
+llama_context:  CUDA_Host  output buffer size =     1.19 MiB
+llama_kv_cache_unified: kv_size = 8192, type_k = 'f16', type_v = 'f16', n_layer = 28, can_shift = 1, padding = 32
+llama_kv_cache_unified:      CUDA0 KV buffer size =   448.00 MiB
+llama_kv_cache_unified: KV self size  =  448.00 MiB, K (f16):  224.00 MiB, V (f16):  224.00 MiB
+llama_context:      CUDA0 compute buffer size =   492.00 MiB
+llama_context:  CUDA_Host compute buffer size =    23.01 MiB
+llama_context: graph nodes  = 1042
+llama_context: graph splits = 2
+[?2026h[?25l[1G⠴ [K[?25h[?2026ltime=2025-06-19T00:47:14.604+02:00 level=INFO source=server.go:630 msg="llama runner started in 1.76 seconds"
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h[?25l[?25hINFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+time=2025-06-19T00:53:20.547+02:00 level=INFO source=routes.go:1234 msg="server config" env="map[CUDA_VISIBLE_DEVICES:0 GPU_DEVICE_ORDINAL:0 HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:4096 OLLAMA_DEBUG:INFO OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://0.0.0.0:11889 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY:cublas OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:4 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/home/jye/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES:0 http_proxy: https_proxy: no_proxy:]"
+time=2025-06-19T00:53:20.557+02:00 level=INFO source=images.go:479 msg="total blobs: 38"
+time=2025-06-19T00:53:20.558+02:00 level=INFO source=images.go:486 msg="total unused blobs removed: 0"
+time=2025-06-19T00:53:20.559+02:00 level=INFO source=routes.go:1287 msg="Listening on [::]:11889 (version 0.9.0)"
+time=2025-06-19T00:53:20.561+02:00 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+time=2025-06-19T00:53:21.109+02:00 level=INFO source=types.go:130 msg="inference compute" id=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc library=cuda variant=v12 compute=9.0 driver=12.7 name="NVIDIA H100" total="93.1 GiB" available="92.6 GiB"
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠼ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling 1cecc26325a1: 100% ▕██████████████████▏ 4.1 GB                         [K
+pulling 43070e2d4e53: 100% ▕██████████████████▏  11 KB                         [K
+pulling d68706c17530: 100% ▕██████████████████▏   98 B                         [K
+pulling 415f0f6b43dd: 100% ▕██████████████████▏   65 B                         [K
+pulling 278996753456: 100% ▕██████████████████▏  483 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026ltime=2025-06-19T00:53:26.597+02:00 level=INFO source=sched.go:788 msg="new model will fit in available VRAM in single GPU, loading" model=/home/jye/.ollama/models/blobs/sha256-1cecc26325a197571a1961bfacf64dc6e35e0f05faf57d3c6941a982e1eb2e1d gpu=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc parallel=2 available=99425779712 required="5.9 GiB"
+[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026ltime=2025-06-19T00:53:26.861+02:00 level=INFO source=server.go:135 msg="system memory" total="755.6 GiB" free="725.5 GiB" free_swap="0 B"
+time=2025-06-19T00:53:26.862+02:00 level=INFO source=server.go:168 msg=offload library=cuda layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[92.6 GiB]" memory.gpu_overhead="0 B" memory.required.full="5.9 GiB" memory.required.partial="5.9 GiB" memory.required.kv="1.0 GiB" memory.required.allocations="[5.9 GiB]" memory.weights.total="3.8 GiB" memory.weights.repeating="3.7 GiB" memory.weights.nonrepeating="102.6 MiB" memory.graph.full="560.0 MiB" memory.graph.partial="585.0 MiB"
+llama_model_loader: loaded meta data with 24 key-value pairs and 291 tensors from /home/jye/.ollama/models/blobs/sha256-1cecc26325a197571a1961bfacf64dc6e35e0f05faf57d3c6941a982e1eb2e1d (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = openchat
+llama_model_loader: - kv   2:                       llama.context_length u32              = 8192
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   4:                          llama.block_count u32              = 32
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                       llama.rope.freq_base f32              = 10000.000000
+llama_model_loader: - kv  11:                          general.file_type u32              = 2
+llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,32002]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+[?2026h[?25l[1G⠴ [K[?25h[?2026lllama_model_loader: - kv  14:                      tokenizer.ggml.scores arr[f32,32002]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  15:                  tokenizer.ggml.token_type arr[i32,32002]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  16:                      tokenizer.ggml.merges arr[str,58980]   = ["▁ t", "i n", "e r", "▁ a", "h e...
+llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 32000
+llama_model_loader: - kv  19:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  20:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  21:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  22:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+llama_model_loader: - kv  23:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_0:  225 tensors
+llama_model_loader: - type q6_K:    1 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_0
+print_info: file size   = 3.83 GiB (4.54 BPW) 
+load: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+load: special tokens cache size = 5
+load: token to piece cache size = 0.1637 MB
+print_info: arch             = llama
+print_info: vocab_only       = 1
+print_info: model type       = ?B
+print_info: model params     = 7.24 B
+print_info: general.name     = openchat
+print_info: vocab type       = SPM
+print_info: n_vocab          = 32002
+print_info: n_merges         = 0
+print_info: BOS token        = 1 '<s>'
+print_info: EOS token        = 32000 '<|end_of_turn|>'
+print_info: UNK token        = 0 '<unk>'
+print_info: LF token         = 13 '<0x0A>'
+print_info: EOG token        = 32000 '<|end_of_turn|>'
+print_info: max token length = 48
+llama_model_load: vocab only - skipping tensors
+time=2025-06-19T00:53:26.937+02:00 level=INFO source=server.go:431 msg="starting llama server" cmd="/usr/bin/ollama runner --model /home/jye/.ollama/models/blobs/sha256-1cecc26325a197571a1961bfacf64dc6e35e0f05faf57d3c6941a982e1eb2e1d --ctx-size 8192 --batch-size 512 --n-gpu-layers 33 --threads 64 --parallel 2 --port 34223"
+time=2025-06-19T00:53:26.938+02:00 level=INFO source=sched.go:483 msg="loaded runners" count=1
+time=2025-06-19T00:53:26.938+02:00 level=INFO source=server.go:591 msg="waiting for llama runner to start responding"
+time=2025-06-19T00:53:26.938+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server not responding"
+time=2025-06-19T00:53:26.948+02:00 level=INFO source=runner.go:815 msg="starting go runner"
+load_backend: loaded CPU backend from /usr/lib/ollama/libggml-cpu-icelake.so
+[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026lggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA H100, compute capability 9.0, VMM: yes
+load_backend: loaded CUDA backend from /usr/lib/ollama/cuda_v12/libggml-cuda.so
+time=2025-06-19T00:53:27.407+02:00 level=INFO source=ggml.go:104 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.BMI2=1 CPU.0.AVX512=1 CPU.0.AVX512_VBMI=1 CPU.0.AVX512_VNNI=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 CUDA.0.ARCHS=500,600,610,700,750,800,860,870,890,900,1200 CUDA.0.USE_GRAPHS=1 CUDA.0.PEER_MAX_BATCH_SIZE=128 compiler=cgo(gcc)
+time=2025-06-19T00:53:27.408+02:00 level=INFO source=runner.go:874 msg="Server listening on 127.0.0.1:34223"
+time=2025-06-19T00:53:27.441+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server loading model"
+[?2026h[?25l[1G⠹ [K[?25h[?2026lllama_model_load_from_file_impl: using device CUDA0 (NVIDIA H100) - 94819 MiB free
+llama_model_loader: loaded meta data with 24 key-value pairs and 291 tensors from /home/jye/.ollama/models/blobs/sha256-1cecc26325a197571a1961bfacf64dc6e35e0f05faf57d3c6941a982e1eb2e1d (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = openchat
+llama_model_loader: - kv   2:                       llama.context_length u32              = 8192
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   4:                          llama.block_count u32              = 32
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                       llama.rope.freq_base f32              = 10000.000000
+llama_model_loader: - kv  11:                          general.file_type u32              = 2
+llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,32002]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  14:                      tokenizer.ggml.scores arr[f32,32002]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  15:                  tokenizer.ggml.token_type arr[i32,32002]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+[?2026h[?25l[1G⠸ [K[?25h[?2026lllama_model_loader: - kv  16:                      tokenizer.ggml.merges arr[str,58980]   = ["▁ t", "i n", "e r", "▁ a", "h e...
+llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 32000
+llama_model_loader: - kv  19:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  20:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  21:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  22:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+llama_model_loader: - kv  23:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_0:  225 tensors
+llama_model_loader: - type q6_K:    1 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_0
+print_info: file size   = 3.83 GiB (4.54 BPW) 
+load: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+load: special tokens cache size = 5
+load: token to piece cache size = 0.1637 MB
+print_info: arch             = llama
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 8192
+print_info: n_embd           = 4096
+print_info: n_layer          = 32
+print_info: n_head           = 32
+print_info: n_head_kv        = 8
+print_info: n_rot            = 128
+print_info: n_swa            = 0
+print_info: n_swa_pattern    = 1
+print_info: n_embd_head_k    = 128
+print_info: n_embd_head_v    = 128
+print_info: n_gqa            = 4
+print_info: n_embd_k_gqa     = 1024
+print_info: n_embd_v_gqa     = 1024
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-05
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: f_attn_scale     = 0.0e+00
+print_info: n_ff             = 14336
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = 0
+print_info: rope type        = 0
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 10000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 8192
+print_info: rope_finetuned   = unknown
+print_info: ssm_d_conv       = 0
+print_info: ssm_d_inner      = 0
+print_info: ssm_d_state      = 0
+print_info: ssm_dt_rank      = 0
+print_info: ssm_dt_b_c_rms   = 0
+print_info: model type       = 7B
+print_info: model params     = 7.24 B
+print_info: general.name     = openchat
+print_info: vocab type       = SPM
+print_info: n_vocab          = 32002
+print_info: n_merges         = 0
+print_info: BOS token        = 1 '<s>'
+print_info: EOS token        = 32000 '<|end_of_turn|>'
+print_info: UNK token        = 0 '<unk>'
+print_info: LF token         = 13 '<0x0A>'
+print_info: EOG token        = 32000 '<|end_of_turn|>'
+print_info: max token length = 48
+load_tensors: loading model tensors, this can take a while... (mmap = true)
+[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠦ [K[?25h[?2026l[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026lload_tensors: offloading 32 repeating layers to GPU
+load_tensors: offloading output layer to GPU
+load_tensors: offloaded 33/33 layers to GPU
+load_tensors:        CUDA0 model buffer size =  3847.56 MiB
+load_tensors:   CPU_Mapped model buffer size =    70.32 MiB
+[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026lllama_context: constructing llama_context
+llama_context: n_seq_max     = 2
+llama_context: n_ctx         = 8192
+llama_context: n_ctx_per_seq = 4096
+llama_context: n_batch       = 1024
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = 0
+llama_context: freq_base     = 10000.0
+llama_context: freq_scale    = 1
+llama_context: n_ctx_per_seq (4096) < n_ctx_train (8192) -- the full capacity of the model will not be utilized
+llama_context:  CUDA_Host  output buffer size =     0.28 MiB
+llama_kv_cache_unified: kv_size = 8192, type_k = 'f16', type_v = 'f16', n_layer = 32, can_shift = 1, padding = 32
+llama_kv_cache_unified:      CUDA0 KV buffer size =  1024.00 MiB
+llama_kv_cache_unified: KV self size  = 1024.00 MiB, K (f16):  512.00 MiB, V (f16):  512.00 MiB
+llama_context:      CUDA0 compute buffer size =   560.00 MiB
+llama_context:  CUDA_Host compute buffer size =    24.01 MiB
+llama_context: graph nodes  = 1094
+llama_context: graph splits = 2
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026ltime=2025-06-19T00:53:28.695+02:00 level=INFO source=server.go:630 msg="llama runner started in 1.76 seconds"
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h[?25l[?25hINFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+time=2025-06-19T00:59:11.508+02:00 level=INFO source=routes.go:1234 msg="server config" env="map[CUDA_VISIBLE_DEVICES:0 GPU_DEVICE_ORDINAL:0 HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:4096 OLLAMA_DEBUG:INFO OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://0.0.0.0:11889 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY:cublas OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:4 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/home/jye/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES:0 http_proxy: https_proxy: no_proxy:]"
+time=2025-06-19T00:59:11.520+02:00 level=INFO source=images.go:479 msg="total blobs: 38"
+time=2025-06-19T00:59:11.521+02:00 level=INFO source=images.go:486 msg="total unused blobs removed: 0"
+time=2025-06-19T00:59:11.522+02:00 level=INFO source=routes.go:1287 msg="Listening on [::]:11889 (version 0.9.0)"
+time=2025-06-19T00:59:11.524+02:00 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+time=2025-06-19T00:59:12.059+02:00 level=INFO source=types.go:130 msg="inference compute" id=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc library=cuda variant=v12 compute=9.0 driver=12.7 name="NVIDIA H100" total="93.1 GiB" available="92.6 GiB"
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling 667b0c1932bc: 100% ▕██████████████████▏ 4.9 GB                         [K
+pulling 948af2743fc7: 100% ▕██████████████████▏ 1.5 KB                         [K
+pulling 0ba8f0e314b4: 100% ▕██████████████████▏  12 KB                         [K
+pulling 56bb8bd477a5: 100% ▕██████████████████▏   96 B                         [K
+pulling 455f34728c9b: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026ltime=2025-06-19T00:59:17.564+02:00 level=INFO source=sched.go:788 msg="new model will fit in available VRAM in single GPU, loading" model=/home/jye/.ollama/models/blobs/sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29 gpu=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc parallel=2 available=99425779712 required="6.5 GiB"
+[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026ltime=2025-06-19T00:59:17.830+02:00 level=INFO source=server.go:135 msg="system memory" total="755.6 GiB" free="725.5 GiB" free_swap="0 B"
+time=2025-06-19T00:59:17.831+02:00 level=INFO source=server.go:168 msg=offload library=cuda layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[92.6 GiB]" memory.gpu_overhead="0 B" memory.required.full="6.5 GiB" memory.required.partial="6.5 GiB" memory.required.kv="1.0 GiB" memory.required.allocations="[6.5 GiB]" memory.weights.total="4.3 GiB" memory.weights.repeating="3.9 GiB" memory.weights.nonrepeating="411.0 MiB" memory.graph.full="560.0 MiB" memory.graph.partial="677.5 MiB"
+[?2026h[?25l[1G⠴ [K[?25h[?2026lllama_model_loader: loaded meta data with 29 key-value pairs and 292 tensors from /home/jye/.ollama/models/blobs/sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Meta Llama 3.1 8B Instruct
+llama_model_loader: - kv   3:                           general.finetune str              = Instruct
+llama_model_loader: - kv   4:                           general.basename str              = Meta-Llama-3.1
+llama_model_loader: - kv   5:                         general.size_label str              = 8B
+llama_model_loader: - kv   6:                            general.license str              = llama3.1
+llama_model_loader: - kv   7:                               general.tags arr[str,6]       = ["facebook", "meta", "pytorch", "llam...
+llama_model_loader: - kv   8:                          general.languages arr[str,8]       = ["en", "de", "fr", "it", "pt", "hi", ...
+llama_model_loader: - kv   9:                          llama.block_count u32              = 32
+llama_model_loader: - kv  10:                       llama.context_length u32              = 131072
+llama_model_loader: - kv  11:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv  12:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv  13:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv  14:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv  15:                       llama.rope.freq_base f32              = 500000.000000
+llama_model_loader: - kv  16:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  17:                          general.file_type u32              = 15
+llama_model_loader: - kv  18:                           llama.vocab_size u32              = 128256
+llama_model_loader: - kv  19:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv  20:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  21:                         tokenizer.ggml.pre str              = llama-bpe
+llama_model_loader: - kv  22:                      tokenizer.ggml.tokens arr[str,128256]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  23:                  tokenizer.ggml.token_type arr[i32,128256]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+[?2026h[?25l[1G⠦ [K[?25h[?2026lllama_model_loader: - kv  24:                      tokenizer.ggml.merges arr[str,280147]  = ["Ġ Ġ", "Ġ ĠĠĠ", "ĠĠ ĠĠ", "...
+llama_model_loader: - kv  25:                tokenizer.ggml.bos_token_id u32              = 128000
+llama_model_loader: - kv  26:                tokenizer.ggml.eos_token_id u32              = 128009
+llama_model_loader: - kv  27:                    tokenizer.chat_template str              = {{- bos_token }}\n{%- if custom_tools ...
+llama_model_loader: - kv  28:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   66 tensors
+llama_model_loader: - type q4_K:  193 tensors
+llama_model_loader: - type q6_K:   33 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.58 GiB (4.89 BPW) 
+[?2026h[?25l[1G⠇ [K[?25h[?2026lload: special tokens cache size = 256
+load: token to piece cache size = 0.7999 MB
+print_info: arch             = llama
+print_info: vocab_only       = 1
+print_info: model type       = ?B
+print_info: model params     = 8.03 B
+print_info: general.name     = Meta Llama 3.1 8B Instruct
+print_info: vocab type       = BPE
+print_info: n_vocab          = 128256
+print_info: n_merges         = 280147
+print_info: BOS token        = 128000 '<|begin_of_text|>'
+print_info: EOS token        = 128009 '<|eot_id|>'
+print_info: EOT token        = 128009 '<|eot_id|>'
+print_info: EOM token        = 128008 '<|eom_id|>'
+print_info: LF token         = 198 'Ċ'
+print_info: EOG token        = 128008 '<|eom_id|>'
+print_info: EOG token        = 128009 '<|eot_id|>'
+print_info: max token length = 256
+llama_model_load: vocab only - skipping tensors
+time=2025-06-19T00:59:18.132+02:00 level=INFO source=server.go:431 msg="starting llama server" cmd="/usr/bin/ollama runner --model /home/jye/.ollama/models/blobs/sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29 --ctx-size 8192 --batch-size 512 --n-gpu-layers 33 --threads 64 --parallel 2 --port 46509"
+time=2025-06-19T00:59:18.133+02:00 level=INFO source=sched.go:483 msg="loaded runners" count=1
+time=2025-06-19T00:59:18.133+02:00 level=INFO source=server.go:591 msg="waiting for llama runner to start responding"
+time=2025-06-19T00:59:18.133+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server not responding"
+[?2026h[?25l[1G⠇ [K[?25h[?2026ltime=2025-06-19T00:59:18.144+02:00 level=INFO source=runner.go:815 msg="starting go runner"
+load_backend: loaded CPU backend from /usr/lib/ollama/libggml-cpu-icelake.so
+[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026lggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA H100, compute capability 9.0, VMM: yes
+load_backend: loaded CUDA backend from /usr/lib/ollama/cuda_v12/libggml-cuda.so
+time=2025-06-19T00:59:18.612+02:00 level=INFO source=ggml.go:104 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.BMI2=1 CPU.0.AVX512=1 CPU.0.AVX512_VBMI=1 CPU.0.AVX512_VNNI=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 CUDA.0.ARCHS=500,600,610,700,750,800,860,870,890,900,1200 CUDA.0.USE_GRAPHS=1 CUDA.0.PEER_MAX_BATCH_SIZE=128 compiler=cgo(gcc)
+time=2025-06-19T00:59:18.613+02:00 level=INFO source=runner.go:874 msg="Server listening on 127.0.0.1:46509"
+time=2025-06-19T00:59:18.636+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server loading model"
+[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026lllama_model_load_from_file_impl: using device CUDA0 (NVIDIA H100) - 94819 MiB free
+llama_model_loader: loaded meta data with 29 key-value pairs and 292 tensors from /home/jye/.ollama/models/blobs/sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Meta Llama 3.1 8B Instruct
+llama_model_loader: - kv   3:                           general.finetune str              = Instruct
+llama_model_loader: - kv   4:                           general.basename str              = Meta-Llama-3.1
+llama_model_loader: - kv   5:                         general.size_label str              = 8B
+llama_model_loader: - kv   6:                            general.license str              = llama3.1
+llama_model_loader: - kv   7:                               general.tags arr[str,6]       = ["facebook", "meta", "pytorch", "llam...
+llama_model_loader: - kv   8:                          general.languages arr[str,8]       = ["en", "de", "fr", "it", "pt", "hi", ...
+llama_model_loader: - kv   9:                          llama.block_count u32              = 32
+llama_model_loader: - kv  10:                       llama.context_length u32              = 131072
+llama_model_loader: - kv  11:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv  12:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv  13:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv  14:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv  15:                       llama.rope.freq_base f32              = 500000.000000
+llama_model_loader: - kv  16:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  17:                          general.file_type u32              = 15
+llama_model_loader: - kv  18:                           llama.vocab_size u32              = 128256
+llama_model_loader: - kv  19:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv  20:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  21:                         tokenizer.ggml.pre str              = llama-bpe
+llama_model_loader: - kv  22:                      tokenizer.ggml.tokens arr[str,128256]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+[?2026h[?25l[1G⠦ [K[?25h[?2026lllama_model_loader: - kv  23:                  tokenizer.ggml.token_type arr[i32,128256]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  24:                      tokenizer.ggml.merges arr[str,280147]  = ["Ġ Ġ", "Ġ ĠĠĠ", "ĠĠ ĠĠ", "...
+llama_model_loader: - kv  25:                tokenizer.ggml.bos_token_id u32              = 128000
+llama_model_loader: - kv  26:                tokenizer.ggml.eos_token_id u32              = 128009
+llama_model_loader: - kv  27:                    tokenizer.chat_template str              = {{- bos_token }}\n{%- if custom_tools ...
+llama_model_loader: - kv  28:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   66 tensors
+llama_model_loader: - type q4_K:  193 tensors
+llama_model_loader: - type q6_K:   33 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.58 GiB (4.89 BPW) 
+[?2026h[?25l[1G⠧ [K[?25h[?2026lload: special tokens cache size = 256
+[?2026h[?25l[1G⠧ [K[?25h[?2026lload: token to piece cache size = 0.7999 MB
+print_info: arch             = llama
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 131072
+print_info: n_embd           = 4096
+print_info: n_layer          = 32
+print_info: n_head           = 32
+print_info: n_head_kv        = 8
+print_info: n_rot            = 128
+print_info: n_swa            = 0
+print_info: n_swa_pattern    = 1
+print_info: n_embd_head_k    = 128
+print_info: n_embd_head_v    = 128
+print_info: n_gqa            = 4
+print_info: n_embd_k_gqa     = 1024
+print_info: n_embd_v_gqa     = 1024
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-05
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: f_attn_scale     = 0.0e+00
+print_info: n_ff             = 14336
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = 0
+print_info: rope type        = 0
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 500000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 131072
+print_info: rope_finetuned   = unknown
+print_info: ssm_d_conv       = 0
+print_info: ssm_d_inner      = 0
+print_info: ssm_d_state      = 0
+print_info: ssm_dt_rank      = 0
+print_info: ssm_dt_b_c_rms   = 0
+print_info: model type       = 8B
+print_info: model params     = 8.03 B
+print_info: general.name     = Meta Llama 3.1 8B Instruct
+print_info: vocab type       = BPE
+print_info: n_vocab          = 128256
+print_info: n_merges         = 280147
+print_info: BOS token        = 128000 '<|begin_of_text|>'
+print_info: EOS token        = 128009 '<|eot_id|>'
+print_info: EOT token        = 128009 '<|eot_id|>'
+print_info: EOM token        = 128008 '<|eom_id|>'
+print_info: LF token         = 198 'Ċ'
+print_info: EOG token        = 128008 '<|eom_id|>'
+print_info: EOG token        = 128009 '<|eot_id|>'
+print_info: max token length = 256
+load_tensors: loading model tensors, this can take a while... (mmap = true)
+[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠦ [K[?25h[?2026l[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠦ [K[?25h[?2026l[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠦ [K[?25h[?2026l[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026lload_tensors: offloading 32 repeating layers to GPU
+load_tensors: offloading output layer to GPU
+load_tensors: offloaded 33/33 layers to GPU
+load_tensors:        CUDA0 model buffer size =  4403.49 MiB
+load_tensors:   CPU_Mapped model buffer size =   281.81 MiB
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026lllama_context: constructing llama_context
+llama_context: n_seq_max     = 2
+llama_context: n_ctx         = 8192
+llama_context: n_ctx_per_seq = 4096
+llama_context: n_batch       = 1024
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = 0
+llama_context: freq_base     = 500000.0
+llama_context: freq_scale    = 1
+llama_context: n_ctx_per_seq (4096) < n_ctx_train (131072) -- the full capacity of the model will not be utilized
+llama_context:  CUDA_Host  output buffer size =     1.01 MiB
+llama_kv_cache_unified: kv_size = 8192, type_k = 'f16', type_v = 'f16', n_layer = 32, can_shift = 1, padding = 32
+llama_kv_cache_unified:      CUDA0 KV buffer size =  1024.00 MiB
+llama_kv_cache_unified: KV self size  = 1024.00 MiB, K (f16):  512.00 MiB, V (f16):  512.00 MiB
+llama_context:      CUDA0 compute buffer size =   560.00 MiB
+llama_context:  CUDA_Host compute buffer size =    24.01 MiB
+llama_context: graph nodes  = 1094
+llama_context: graph splits = 2
+[?2026h[?25l[1G⠸ [K[?25h[?2026ltime=2025-06-19T00:59:22.646+02:00 level=INFO source=server.go:630 msg="llama runner started in 4.51 seconds"
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h[?25l[?25hINFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+time=2025-06-19T01:06:58.552+02:00 level=INFO source=routes.go:1234 msg="server config" env="map[CUDA_VISIBLE_DEVICES:0 GPU_DEVICE_ORDINAL:0 HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:4096 OLLAMA_DEBUG:INFO OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://0.0.0.0:11889 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY:cublas OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:4 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/home/jye/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES:0 http_proxy: https_proxy: no_proxy:]"
+time=2025-06-19T01:06:58.559+02:00 level=INFO source=images.go:479 msg="total blobs: 38"
+time=2025-06-19T01:06:58.560+02:00 level=INFO source=images.go:486 msg="total unused blobs removed: 0"
+time=2025-06-19T01:06:58.561+02:00 level=INFO source=routes.go:1287 msg="Listening on [::]:11889 (version 0.9.0)"
+time=2025-06-19T01:06:58.563+02:00 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+time=2025-06-19T01:06:59.105+02:00 level=INFO source=types.go:130 msg="inference compute" id=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc library=cuda variant=v12 compute=9.0 driver=12.7 name="NVIDIA H100" total="93.1 GiB" available="92.6 GiB"
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠼ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠴ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠦ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠧ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling ea89e3927d5e: 100% ▕██████████████████▏ 4.5 GB                         [K
+pulling 803b5adc3448: 100% ▕██████████████████▏  218 B                         [K
+pulling 8b89eea08a53: 100% ▕██████████████████▏   88 B                         [K
+pulling 43070e2d4e53: 100% ▕██████████████████▏  11 KB                         [K
+pulling d3d81dcf3ed1: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+INFO:    Environment variable SINGULARITYENV_OLLAMA_HOST is set, but APPTAINERENV_OLLAMA_HOST is preferred
+[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026ltime=2025-06-19T01:07:04.893+02:00 level=INFO source=sched.go:788 msg="new model will fit in available VRAM in single GPU, loading" model=/home/jye/.ollama/models/blobs/sha256-ea89e3927d5ef671159a1359a22cdd418856c4baa2098e665f1c6eed59973968 gpu=GPU-b7d4dce7-10c3-45fc-57b6-88f3a291facc parallel=2 available=99425779712 required="9.3 GiB"
+[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026ltime=2025-06-19T01:07:05.159+02:00 level=INFO source=server.go:135 msg="system memory" total="755.6 GiB" free="725.7 GiB" free_swap="0 B"
+time=2025-06-19T01:07:05.160+02:00 level=INFO source=server.go:168 msg=offload library=cuda layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[92.6 GiB]" memory.gpu_overhead="0 B" memory.required.full="9.3 GiB" memory.required.partial="9.3 GiB" memory.required.kv="4.0 GiB" memory.required.allocations="[9.3 GiB]" memory.weights.total="3.9 GiB" memory.weights.repeating="3.6 GiB" memory.weights.nonrepeating="321.6 MiB" memory.graph.full="682.7 MiB" memory.graph.partial="682.7 MiB"
+[?2026h[?25l[1G⠴ [K[?25h[?2026lllama_model_loader: loaded meta data with 38 key-value pairs and 355 tensors from /home/jye/.ollama/models/blobs/sha256-ea89e3927d5ef671159a1359a22cdd418856c4baa2098e665f1c6eed59973968 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = olmo2
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Open_Instruct_Dev
+llama_model_loader: - kv   3:                       general.organization str              = Allenai
+llama_model_loader: - kv   4:                           general.finetune str              = Instruct
+llama_model_loader: - kv   5:                           general.basename str              = OLMo-2-1124
+llama_model_loader: - kv   6:                         general.size_label str              = 7B
+llama_model_loader: - kv   7:                            general.license str              = apache-2.0
+llama_model_loader: - kv   8:                   general.base_model.count u32              = 1
+llama_model_loader: - kv   9:                  general.base_model.0.name str              = OLMo 2 1124 7B DPO
+llama_model_loader: - kv  10:          general.base_model.0.organization str              = Allenai
+llama_model_loader: - kv  11:              general.base_model.0.repo_url str              = https://huggingface.co/allenai/OLMo-2...
+llama_model_loader: - kv  12:                      general.dataset.count u32              = 1
+llama_model_loader: - kv  13:                     general.dataset.0.name str              = RLVR GSM
+llama_model_loader: - kv  14:             general.dataset.0.organization str              = Allenai
+llama_model_loader: - kv  15:                 general.dataset.0.repo_url str              = https://huggingface.co/allenai/RLVR-GSM
+llama_model_loader: - kv  16:                               general.tags arr[str,1]       = ["text-generation"]
+llama_model_loader: - kv  17:                          general.languages arr[str,1]       = ["en"]
+llama_model_loader: - kv  18:                          olmo2.block_count u32              = 32
+llama_model_loader: - kv  19:                       olmo2.context_length u32              = 4096
+llama_model_loader: - kv  20:                     olmo2.embedding_length u32              = 4096
+llama_model_loader: - kv  21:                  olmo2.feed_forward_length u32              = 11008
+llama_model_loader: - kv  22:                 olmo2.attention.head_count u32              = 32
+llama_model_loader: - kv  23:              olmo2.attention.head_count_kv u32              = 32
+llama_model_loader: - kv  24:                       olmo2.rope.freq_base f32              = 500000.000000
+llama_model_loader: - kv  25:     olmo2.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  26:                          general.file_type u32              = 15
+llama_model_loader: - kv  27:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  28:                         tokenizer.ggml.pre str              = dbrx
+llama_model_loader: - kv  29:                      tokenizer.ggml.tokens arr[str,100352]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  30:                  tokenizer.ggml.token_type arr[i32,100352]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  31:                      tokenizer.ggml.merges arr[str,100000]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  32:                tokenizer.ggml.bos_token_id u32              = 100257
+llama_model_loader: - kv  33:                tokenizer.ggml.eos_token_id u32              = 100257
+llama_model_loader: - kv  34:            tokenizer.ggml.unknown_token_id u32              = 100257
+llama_model_loader: - kv  35:            tokenizer.ggml.padding_token_id u32              = 100277
+llama_model_loader: - kv  36:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+llama_model_loader: - kv  37:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:  129 tensors
+llama_model_loader: - type q4_K:  193 tensors
+llama_model_loader: - type q6_K:   33 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.16 GiB (4.90 BPW) 
+[?2026h[?25l[1G⠦ [K[?25h[?2026lload: special tokens cache size = 22
+load: token to piece cache size = 0.6143 MB
+print_info: arch             = olmo2
+print_info: vocab_only       = 1
+print_info: model type       = ?B
+print_info: model params     = 7.30 B
+print_info: general.name     = Open_Instruct_Dev
+print_info: vocab type       = BPE
+print_info: n_vocab          = 100352
+print_info: n_merges         = 100000
+print_info: BOS token        = 100257 '<|endoftext|>'
+print_info: EOS token        = 100257 '<|endoftext|>'
+print_info: EOT token        = 100265 '<|im_end|>'
+print_info: UNK token        = 100257 '<|endoftext|>'
+print_info: PAD token        = 100277 '<|pad|>'
+print_info: LF token         = 198 'Ċ'
+print_info: FIM PRE token    = 100258 '<|fim_prefix|>'
+print_info: FIM SUF token    = 100260 '<|fim_suffix|>'
+print_info: FIM MID token    = 100259 '<|fim_middle|>'
+print_info: EOG token        = 100257 '<|endoftext|>'
+print_info: EOG token        = 100265 '<|im_end|>'
+print_info: max token length = 256
+llama_model_load: vocab only - skipping tensors
+time=2025-06-19T01:07:05.334+02:00 level=INFO source=server.go:431 msg="starting llama server" cmd="/usr/bin/ollama runner --model /home/jye/.ollama/models/blobs/sha256-ea89e3927d5ef671159a1359a22cdd418856c4baa2098e665f1c6eed59973968 --ctx-size 8192 --batch-size 512 --n-gpu-layers 33 --threads 64 --parallel 2 --port 42457"
+time=2025-06-19T01:07:05.335+02:00 level=INFO source=sched.go:483 msg="loaded runners" count=1
+time=2025-06-19T01:07:05.335+02:00 level=INFO source=server.go:591 msg="waiting for llama runner to start responding"
+time=2025-06-19T01:07:05.335+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server not responding"
+time=2025-06-19T01:07:05.345+02:00 level=INFO source=runner.go:815 msg="starting go runner"
+load_backend: loaded CPU backend from /usr/lib/ollama/libggml-cpu-icelake.so
+[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026lggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device 0: NVIDIA H100, compute capability 9.0, VMM: yes
+load_backend: loaded CUDA backend from /usr/lib/ollama/cuda_v12/libggml-cuda.so
+time=2025-06-19T01:07:05.855+02:00 level=INFO source=ggml.go:104 msg=system CPU.0.SSE3=1 CPU.0.SSSE3=1 CPU.0.AVX=1 CPU.0.AVX2=1 CPU.0.F16C=1 CPU.0.FMA=1 CPU.0.BMI2=1 CPU.0.AVX512=1 CPU.0.AVX512_VBMI=1 CPU.0.AVX512_VNNI=1 CPU.0.LLAMAFILE=1 CPU.1.LLAMAFILE=1 CUDA.0.ARCHS=500,600,610,700,750,800,860,870,890,900,1200 CUDA.0.USE_GRAPHS=1 CUDA.0.PEER_MAX_BATCH_SIZE=128 compiler=cgo(gcc)
+time=2025-06-19T01:07:05.856+02:00 level=INFO source=runner.go:874 msg="Server listening on 127.0.0.1:42457"
+[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026lllama_model_load_from_file_impl: using device CUDA0 (NVIDIA H100) - 94819 MiB free
+llama_model_loader: loaded meta data with 38 key-value pairs and 355 tensors from /home/jye/.ollama/models/blobs/sha256-ea89e3927d5ef671159a1359a22cdd418856c4baa2098e665f1c6eed59973968 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = olmo2
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Open_Instruct_Dev
+llama_model_loader: - kv   3:                       general.organization str              = Allenai
+llama_model_loader: - kv   4:                           general.finetune str              = Instruct
+llama_model_loader: - kv   5:                           general.basename str              = OLMo-2-1124
+llama_model_loader: - kv   6:                         general.size_label str              = 7B
+llama_model_loader: - kv   7:                            general.license str              = apache-2.0
+llama_model_loader: - kv   8:                   general.base_model.count u32              = 1
+llama_model_loader: - kv   9:                  general.base_model.0.name str              = OLMo 2 1124 7B DPO
+llama_model_loader: - kv  10:          general.base_model.0.organization str              = Allenai
+llama_model_loader: - kv  11:              general.base_model.0.repo_url str              = https://huggingface.co/allenai/OLMo-2...
+llama_model_loader: - kv  12:                      general.dataset.count u32              = 1
+llama_model_loader: - kv  13:                     general.dataset.0.name str              = RLVR GSM
+llama_model_loader: - kv  14:             general.dataset.0.organization str              = Allenai
+llama_model_loader: - kv  15:                 general.dataset.0.repo_url str              = https://huggingface.co/allenai/RLVR-GSM
+llama_model_loader: - kv  16:                               general.tags arr[str,1]       = ["text-generation"]
+llama_model_loader: - kv  17:                          general.languages arr[str,1]       = ["en"]
+llama_model_loader: - kv  18:                          olmo2.block_count u32              = 32
+llama_model_loader: - kv  19:                       olmo2.context_length u32              = 4096
+llama_model_loader: - kv  20:                     olmo2.embedding_length u32              = 4096
+llama_model_loader: - kv  21:                  olmo2.feed_forward_length u32              = 11008
+llama_model_loader: - kv  22:                 olmo2.attention.head_count u32              = 32
+llama_model_loader: - kv  23:              olmo2.attention.head_count_kv u32              = 32
+llama_model_loader: - kv  24:                       olmo2.rope.freq_base f32              = 500000.000000
+llama_model_loader: - kv  25:     olmo2.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  26:                          general.file_type u32              = 15
+llama_model_loader: - kv  27:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  28:                         tokenizer.ggml.pre str              = dbrx
+llama_model_loader: - kv  29:                      tokenizer.ggml.tokens arr[str,100352]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  30:                  tokenizer.ggml.token_type arr[i32,100352]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  31:                      tokenizer.ggml.merges arr[str,100000]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  32:                tokenizer.ggml.bos_token_id u32              = 100257
+llama_model_loader: - kv  33:                tokenizer.ggml.eos_token_id u32              = 100257
+llama_model_loader: - kv  34:            tokenizer.ggml.unknown_token_id u32              = 100257
+llama_model_loader: - kv  35:            tokenizer.ggml.padding_token_id u32              = 100277
+llama_model_loader: - kv  36:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+llama_model_loader: - kv  37:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:  129 tensors
+llama_model_loader: - type q4_K:  193 tensors
+llama_model_loader: - type q6_K:   33 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.16 GiB (4.90 BPW) 
+time=2025-06-19T01:07:06.087+02:00 level=INFO source=server.go:625 msg="waiting for server to become available" status="llm server loading model"
+[?2026h[?25l[1G⠼ [K[?25h[?2026lload: special tokens cache size = 22
+load: token to piece cache size = 0.6143 MB
+print_info: arch             = olmo2
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 4096
+print_info: n_embd           = 4096
+print_info: n_layer          = 32
+print_info: n_head           = 32
+print_info: n_head_kv        = 32
+print_info: n_rot            = 128
+print_info: n_swa            = 0
+print_info: n_swa_pattern    = 1
+print_info: n_embd_head_k    = 128
+print_info: n_embd_head_v    = 128
+print_info: n_gqa            = 1
+print_info: n_embd_k_gqa     = 4096
+print_info: n_embd_v_gqa     = 4096
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-06
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: f_attn_scale     = 0.0e+00
+print_info: n_ff             = 11008
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = 0
+print_info: rope type        = 2
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 500000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 4096
+print_info: rope_finetuned   = unknown
+print_info: ssm_d_conv       = 0
+print_info: ssm_d_inner      = 0
+print_info: ssm_d_state      = 0
+print_info: ssm_dt_rank      = 0
+print_info: ssm_dt_b_c_rms   = 0
+print_info: model type       = 7B
+print_info: model params     = 7.30 B
+print_info: general.name     = Open_Instruct_Dev
+print_info: vocab type       = BPE
+print_info: n_vocab          = 100352
+print_info: n_merges         = 100000
+print_info: BOS token        = 100257 '<|endoftext|>'
+print_info: EOS token        = 100257 '<|endoftext|>'
+print_info: EOT token        = 100265 '<|im_end|>'
+print_info: UNK token        = 100257 '<|endoftext|>'
+print_info: PAD token        = 100277 '<|pad|>'
+print_info: LF token         = 198 'Ċ'
+print_info: FIM PRE token    = 100258 '<|fim_prefix|>'
+print_info: FIM SUF token    = 100260 '<|fim_suffix|>'
+print_info: FIM MID token    = 100259 '<|fim_middle|>'
+print_info: EOG token        = 100257 '<|endoftext|>'
+print_info: EOG token        = 100265 '<|im_end|>'
+print_info: max token length = 256
+load_tensors: loading model tensors, this can take a while... (mmap = true)
+[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠦ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠦ [K[?25h[?2026l[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠦ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026l[?2026h[?25l[1G⠋ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠴ [K[?25h[?2026lload_tensors: offloading 32 repeating layers to GPU
+load_tensors: offloading output layer to GPU
+load_tensors: offloaded 33/33 layers to GPU
+load_tensors:        CUDA0 model buffer size =  4040.96 MiB
+load_tensors:   CPU_Mapped model buffer size =   220.50 MiB
+[?2026h[?25l[1G⠴ [K[?25h[?2026l[?2026h[?25l[1G⠦ [K[?25h[?2026lllama_context: constructing llama_context
+llama_context: n_seq_max     = 2
+llama_context: n_ctx         = 8192
+llama_context: n_ctx_per_seq = 4096
+llama_context: n_batch       = 1024
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = 0
+llama_context: freq_base     = 500000.0
+llama_context: freq_scale    = 1
+llama_context:  CUDA_Host  output buffer size =     0.80 MiB
+llama_kv_cache_unified: kv_size = 8192, type_k = 'f16', type_v = 'f16', n_layer = 32, can_shift = 1, padding = 32
+llama_kv_cache_unified:      CUDA0 KV buffer size =  4096.00 MiB
+llama_kv_cache_unified: KV self size  = 4096.00 MiB, K (f16): 2048.00 MiB, V (f16): 2048.00 MiB
+llama_context:      CUDA0 compute buffer size =   552.00 MiB
+llama_context:  CUDA_Host compute buffer size =    24.01 MiB
+llama_context: graph nodes  = 1222
+llama_context: graph splits = 2
+[?2026h[?25l[1G⠧ [K[?25h[?2026l[?2026h[?25l[1G⠇ [K[?25h[?2026l[?2026h[?25l[1G⠏ [K[?25h[?2026ltime=2025-06-19T01:07:09.598+02:00 level=INFO source=server.go:630 msg="llama runner started in 4.26 seconds"
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h[?25l[?25hslurmstepd: error: *** JOB 12484455 ON gcn122 CANCELLED AT 2025-06-19T01:09:47 ***

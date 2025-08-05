@@ -1,0 +1,49 @@
+Starting job on gcn147.local.snellius.surf.nl at Tue Jun 24 15:50:02 CEST 2025
+Total CPUs allocated: 16
+Number of CPUs allocated by Slurm=8
+[INFO] ROOT_DIR set to /gpfs/home5/jye/dse
+Using python: /gpfs/home5/jye/.venv/bin/python
+apptainer version 1.4.1-1.el9
+Tue Jun 24 15:50:04 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100                    On  |   00000000:C6:00.0 Off |                    0 |
+| N/A   32C    P0             68W /  700W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking available executables inside Singularity:
+/sw/arch/RHEL8/EB_production/2023/software/cuDNN/8.9.2.26-CUDA-12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/nvvm/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/extras/CUPTI/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/Python/3.11.3-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/OpenSSL/3/lib:/sw/arch/RHEL8/EB_production/2023/software/libffi/3.4.4-GCCcore-12.3.0/lib64:/sw/arch/RHEL8/EB_production/2023/software/XZ/5.4.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/SQLite/3.42.0-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/Tcl/8.6.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/libreadline/8.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/ncurses/6.4-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/bzip2/1.0.8-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/binutils/2.40-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/zlib/1.2.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/GCCcore/12.3.0/lib64
+/usr/bin/ollama
+=================================================================
+Starting Experiment with:
+  RAG Model: gemma:7b
+  Story Model: dk
+=================================================================
+Running Python script with models: gemma:7b
+
+JOB STATISTICS
+==============
+Job ID: 12596336
+Cluster: snellius
+User/Group: jye/jye
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:02
+CPU Efficiency: 0.12% of 00:28:00 core-walltime
+Job Wall-clock time: 00:01:45
+Memory Utilized: 619.89 MB
+Memory Efficiency: 1.89% of 32.00 GB (32.00 GB/node)

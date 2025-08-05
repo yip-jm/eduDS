@@ -1,0 +1,255 @@
+{
+  "summary_scores": {
+    "total_questions_evaluated": 20,
+    "average_retrieval_score": 3.25,
+    "average_generation_scores": {
+      "faithfulness": 4.3,
+      "accuracy": 3.9,
+      "completeness": 3.35
+    },
+    "average_generation_score_total": 3.85,
+    "overall_rag_score": 3.61
+  },
+  "detailed_evaluations": [
+    {
+      "question_number": 1,
+      "question": "I need to prepare lessons on virtualization, with a focus on full virtualization, para-virtualization, and hardware-supported virtualization. Include how each method works, the role of hypervisors (Type 1 and Type 2), and performance implications.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 4,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 2,
+      "question": "Design instructional content on virtualization, emphasizing the operational principles of full, para-, and hardware-supported virtualization, including a breakdown of hypervisor types and associated performance trade-offs.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 3,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 3,
+      "question": "I want to create a lesson on containerization technologies, covering Docker, Singularity, and Linux Containers. Emphasize their differences, use cases in HPC, and how they differ from traditional hypervisor-based virtualization.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 4,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 4,
+      "question": "Prepare a class on modern containerization tools, comparing Docker, Singularity, and Linux Containers, focusing on their unique features, HPC scenarios, and differences from traditional virtualization methods.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 3,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 5,
+      "question": "Please help me design a class on service-oriented architecture, explaining the evolution from monolithic to SOA, the importance of statelessness, abstraction through interfaces, and the role of brokers in service discovery.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 4,
+          "completeness_score": 4
+        }
+      }
+    },
+    {
+      "question_number": 6,
+      "question": "Create educational content on SOA, detailing its origins from monolithic architectures, with a focus on stateless design, interface abstraction, and how brokers enable service discovery.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 4,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 7,
+      "question": "I need materials to teach cloud computing fundamentals, contrasting Grid systems vs. Cloud systems, their resource management models, and the shift from X.509-based Grid access to pay-per-use cloud elasticity.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 3,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 8,
+      "question": "Design a lesson introducing cloud fundamentals by comparing Grid computing to cloud models, exploring their resource control methods, and highlighting the transition from Grid’s X.509 access to cloud's pay-per-use elasticity.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 3,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 9,
+      "question": "Generate a storytelling lesson on Kubernetes and container orchestration, including key concepts like Pods, Clusters, Master nodes, kubelets, and how orchestration supports microservices at scale.",
+      "evaluation": {
+        "retrieval_score": 4,
+        "generation_scores": {
+          "faithfulness_score": 5,
+          "accuracy_score": 5,
+          "completeness_score": 4
+        }
+      }
+    },
+    {
+      "question_number": 10,
+      "question": "Create a narrative-style lesson on Kubernetes that introduces orchestration concepts such as Pods, Clusters, Master components, and kubelets, emphasizing how these elements scale microservice-based architectures.",
+      "evaluation": {
+        "retrieval_score": 4,
+        "generation_scores": {
+          "faithfulness_score": 5,
+          "accuracy_score": 5,
+          "completeness_score": 4
+        }
+      }
+    },
+    {
+      "question_number": 11,
+      "question": "Create a lecture on cloud security, focusing on shared responsibility models, identity/access management, data protection responsibilities in IaaS, PaaS, and SaaS, and the role of tools like AWS Trusted Advisor.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 4,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 12,
+      "question": "Build a lecture covering key cloud security topics including the division of security responsibilities, IAM frameworks, data safeguarding in different service models, and auditing tools such as AWS Trusted Advisor.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 4,
+          "completeness_score": 4
+        }
+      }
+    },
+    {
+      "question_number": 13,
+      "question": "I need to prepare a lesson on DevOps in cloud systems, exploring cultural and technical practices, CI/CD workflows, and the transformation from traditional IT silos to agile, cross-functional teams.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 4,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 14,
+      "question": "Design a class on DevOps within cloud environments, covering both cultural shifts and technical workflows like CI/CD, and explaining the move from siloed IT operations to collaborative, agile teams.",
+      "evaluation": {
+        "retrieval_score": 4,
+        "generation_scores": {
+          "faithfulness_score": 5,
+          "accuracy_score": 4,
+          "completeness_score": 4
+        }
+      }
+    },
+    {
+      "question_number": 15,
+      "question": "Please help me prepare a class on memory and I/O virtualization, especially how shadow page tables, MMUs, and device emulation work in modern hypervisors, and the implications for performance.",
+      "evaluation": {
+        "retrieval_score": 4,
+        "generation_scores": {
+          "faithfulness_score": 5,
+          "accuracy_score": 4,
+          "completeness_score": 4
+        }
+      }
+    },
+    {
+      "question_number": 16,
+      "question": "Develop a class on how memory and I/O virtualization are implemented in hypervisors, including the roles of shadow page tables, MMUs, and device emulation, and their impact on system performance.",
+      "evaluation": {
+        "retrieval_score": 4,
+        "generation_scores": {
+          "faithfulness_score": 5,
+          "accuracy_score": 4,
+          "completeness_score": 4
+        }
+      }
+    },
+    {
+      "question_number": 17,
+      "question": "I want to introduce cloud-native architecture, describing microservices, containers, orchestration layers, and how the CNCF defines the cloud-native stack, including real-world applications from companies like Netflix and Uber.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 4,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 18,
+      "question": "Prepare a lesson introducing cloud-native design, covering microservices, container technologies, orchestration tools, CNCF’s stack definition, and examples from companies like Netflix and Uber.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 4,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 19,
+      "question": "Help me develop a lesson on cloud standards and compliance, including NIST guidelines, ISO standards, CSA STAR certifications, and the importance of interoperability and secure multi-cloud operations.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 5,
+          "accuracy_score": 4,
+          "completeness_score": 3
+        }
+      }
+    },
+    {
+      "question_number": 20,
+      "question": "Create a lecture on cloud compliance and standardization, covering NIST, ISO frameworks, CSA STAR certification, and emphasizing the need for interoperability and secure multi-cloud environments.",
+      "evaluation": {
+        "retrieval_score": 3,
+        "generation_scores": {
+          "faithfulness_score": 4,
+          "accuracy_score": 4,
+          "completeness_score": 3
+        }
+      }
+    }
+  ]
+}

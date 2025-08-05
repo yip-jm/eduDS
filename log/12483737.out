@@ -1,0 +1,65 @@
+Starting job on gcn150.local.snellius.surf.nl at Wed Jun 18 23:26:57 CEST 2025
+Total CPUs allocated: 16
+Number of CPUs allocated by Slurm=8
+[INFO] ROOT_DIR set to /gpfs/home5/jye/dse
+Using python: /gpfs/home5/jye/.venv/bin/python
+Looking in links: https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
+Requirement already satisfied: paddlepaddle-gpu==2.6.0 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (2.6.0)
+Requirement already satisfied: httpx in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (0.28.1)
+Requirement already satisfied: numpy>=1.13 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (2.2.5)
+Requirement already satisfied: Pillow in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (11.2.1)
+Requirement already satisfied: decorator in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (5.2.1)
+Requirement already satisfied: astor in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (0.8.1)
+Requirement already satisfied: opt-einsum==3.3.0 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (3.3.0)
+Requirement already satisfied: protobuf>=3.20.2 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (3.20.3)
+Requirement already satisfied: anyio in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from httpx->paddlepaddle-gpu==2.6.0) (4.9.0)
+Requirement already satisfied: certifi in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from httpx->paddlepaddle-gpu==2.6.0) (2025.4.26)
+Requirement already satisfied: httpcore==1.* in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from httpx->paddlepaddle-gpu==2.6.0) (1.0.9)
+Requirement already satisfied: idna in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from httpx->paddlepaddle-gpu==2.6.0) (3.10)
+Requirement already satisfied: h11>=0.16 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from httpcore==1.*->httpx->paddlepaddle-gpu==2.6.0) (0.16.0)
+Requirement already satisfied: sniffio>=1.1 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from anyio->httpx->paddlepaddle-gpu==2.6.0) (1.3.1)
+Requirement already satisfied: typing_extensions>=4.5 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from anyio->httpx->paddlepaddle-gpu==2.6.0) (4.13.2)
+apptainer version 1.4.1-1.el9
+Wed Jun 18 23:27:01 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100                    On  |   00000000:C6:00.0 Off |                    0 |
+| N/A   32C    P0             67W /  700W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking available executables inside Singularity:
+/sw/arch/RHEL8/EB_production/2023/software/cuDNN/8.9.2.26-CUDA-12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/nvvm/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/extras/CUPTI/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/Python/3.11.3-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/OpenSSL/3/lib:/sw/arch/RHEL8/EB_production/2023/software/libffi/3.4.4-GCCcore-12.3.0/lib64:/sw/arch/RHEL8/EB_production/2023/software/XZ/5.4.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/SQLite/3.42.0-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/Tcl/8.6.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/libreadline/8.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/ncurses/6.4-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/bzip2/1.0.8-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/binutils/2.40-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/zlib/1.2.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/GCCcore/12.3.0/lib64
+/usr/bin/ollama
+=================================================================
+Starting Experiment with:
+  RAG Model: deepseek-llm:7b
+  Story Model: deepseek-llm:7b
+=================================================================
+Starting Ollama server...
+
+JOB STATISTICS
+==============
+Job ID: 12483737
+Cluster: snellius
+User/Group: jye/jye
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:03
+CPU Efficiency: 1.34% of 00:03:44 core-walltime
+Job Wall-clock time: 00:00:14
+Memory Utilized: 1.58 MB
+Memory Efficiency: 0.00% of 32.00 GB (32.00 GB/node)

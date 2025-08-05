@@ -1,0 +1,63 @@
+Starting job on gcn20.local.snellius.surf.nl at Fri Jul 25 07:13:20 CEST 2025
+Total CPUs allocated: 18
+Number of CPUs allocated by Slurm=8
+[INFO] ROOT_DIR set to /gpfs/home5/jye/dse
+Using python: /gpfs/home5/jye/.venv/bin/python
+apptainer version 1.4.1-1.el9
+Fri Jul 25 07:13:22 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:CA:00.0 Off |                    0 |
+| N/A   30C    P0             49W /  400W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking available executables inside Singularity:
+/sw/arch/RHEL8/EB_production/2023/software/cuDNN/8.9.2.26-CUDA-12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/nvvm/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/extras/CUPTI/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/Python/3.11.3-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/OpenSSL/3/lib:/sw/arch/RHEL8/EB_production/2023/software/libffi/3.4.4-GCCcore-12.3.0/lib64:/sw/arch/RHEL8/EB_production/2023/software/XZ/5.4.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/SQLite/3.42.0-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/Tcl/8.6.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/libreadline/8.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/ncurses/6.4-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/bzip2/1.0.8-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/binutils/2.40-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/zlib/1.2.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/GCCcore/12.3.0/lib64
+/usr/bin/ollama
+=================================================================
+Starting Experiment with:
+  RAG Model: gemma:7b
+  Story Model: deepseek-llm:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/25 - 07:13:29 | 200 |   10.657331ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/25 - 07:13:29 | 200 |      36.071µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/25 - 07:13:30 | 200 |  742.959204ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/25 - 07:13:30 | 200 |      29.979µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/25 - 07:13:30 | 200 |   44.215059ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/25 - 07:13:37 | 200 |  6.342038126s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: gemma:7b
+[GIN] 2025/07/25 - 07:13:58 | 200 |  4.183730771s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/07/25 - 07:14:02 | 200 |   3.23474036s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/07/25 - 07:14:03 | 200 |  1.029801973s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/07/25 - 07:14:07 | 200 |  3.893590404s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/07/25 - 07:14:08 | 200 |  1.520623612s |       127.0.0.1 | POST     "/api/chat"
+
+JOB STATISTICS
+==============
+Job ID: 13288896
+Cluster: snellius
+User/Group: jye/jye
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:04
+CPU Efficiency: 0.38% of 00:17:24 core-walltime
+Job Wall-clock time: 00:00:58
+Memory Utilized: 1.07 GB
+Memory Efficiency: 3.35% of 32.00 GB (32.00 GB/node)

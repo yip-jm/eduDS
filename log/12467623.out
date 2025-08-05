@@ -1,0 +1,122 @@
+Starting job on gcn147.local.snellius.surf.nl at Wed Jun 18 05:50:22 CEST 2025
+Total CPUs allocated: 16
+Number of CPUs allocated by Slurm=8
+[INFO] ROOT_DIR set to /gpfs/home5/jye/dse
+Using python: /gpfs/home5/jye/.venv/bin/python
+Looking in links: https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
+Requirement already satisfied: paddlepaddle-gpu==2.6.0 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (2.6.0)
+Requirement already satisfied: httpx in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (0.28.1)
+Requirement already satisfied: numpy>=1.13 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (2.2.5)
+Requirement already satisfied: Pillow in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (11.2.1)
+Requirement already satisfied: decorator in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (5.2.1)
+Requirement already satisfied: astor in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (0.8.1)
+Requirement already satisfied: opt-einsum==3.3.0 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (3.3.0)
+Requirement already satisfied: protobuf>=3.20.2 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from paddlepaddle-gpu==2.6.0) (3.20.3)
+Requirement already satisfied: anyio in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from httpx->paddlepaddle-gpu==2.6.0) (4.9.0)
+Requirement already satisfied: certifi in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from httpx->paddlepaddle-gpu==2.6.0) (2025.4.26)
+Requirement already satisfied: httpcore==1.* in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from httpx->paddlepaddle-gpu==2.6.0) (1.0.9)
+Requirement already satisfied: idna in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from httpx->paddlepaddle-gpu==2.6.0) (3.10)
+Requirement already satisfied: h11>=0.16 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from httpcore==1.*->httpx->paddlepaddle-gpu==2.6.0) (0.16.0)
+Requirement already satisfied: sniffio>=1.1 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from anyio->httpx->paddlepaddle-gpu==2.6.0) (1.3.1)
+Requirement already satisfied: typing_extensions>=4.5 in /gpfs/home5/jye/.venv/lib/python3.11/site-packages (from anyio->httpx->paddlepaddle-gpu==2.6.0) (4.13.2)
+apptainer version 1.4.1-1.el9
+Wed Jun 18 05:50:24 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100                    On  |   00000000:26:00.0 Off |                    0 |
+| N/A   33C    P0             68W /  700W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking available executables inside Singularity:
+/sw/arch/RHEL8/EB_production/2023/software/cuDNN/8.9.2.26-CUDA-12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/nvvm/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/extras/CUPTI/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/Python/3.11.3-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/OpenSSL/3/lib:/sw/arch/RHEL8/EB_production/2023/software/libffi/3.4.4-GCCcore-12.3.0/lib64:/sw/arch/RHEL8/EB_production/2023/software/XZ/5.4.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/SQLite/3.42.0-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/Tcl/8.6.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/libreadline/8.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/ncurses/6.4-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/bzip2/1.0.8-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/binutils/2.40-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/zlib/1.2.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/GCCcore/12.3.0/lib64
+/usr/bin/ollama
+=================================================================
+Starting Experiment with:
+  Embedding: BAAI/bge-large-en-v1.5
+  LLM Model: deepseek-llm:7b
+  Story Model: gemma:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/06/18 - 05:50:29 | 200 |    4.440218ms |             ::1 | GET      "/api/tags"
+Ollama for RAG server is ready!
+[GIN] 2025/06/18 - 05:50:30 | 200 |    1.740491ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/06/18 - 05:50:30 | 200 |    1.439053ms |             ::1 | GET      "/api/tags"
+Ollama for VL-LLM server is ready!
+[GIN] 2025/06/18 - 05:50:30 | 200 |       29.18µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:30 | 200 |  517.311942ms |       127.0.0.1 | POST     "/api/pull"
+Ollama model -- qwen2.5vl:7b is downloaded!
+[GIN] 2025/06/18 - 05:50:31 | 200 |       26.01µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:31 | 200 |    48.31169ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/18 - 05:50:33 | 200 |  2.406279088s |       127.0.0.1 | POST     "/api/generate"
+[GIN] 2025/06/18 - 05:50:34 | 200 |       31.87µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:34 | 200 |  428.576323ms |       127.0.0.1 | POST     "/api/pull"
+Ollama RAG model is downloaded!
+[GIN] 2025/06/18 - 05:50:34 | 200 |       31.39µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:34 | 200 |   32.905057ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/18 - 05:50:36 | 200 |  2.057802588s |       127.0.0.1 | POST     "/api/generate"
+[GIN] 2025/06/18 - 05:50:37 | 200 |       32.47µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:37 | 200 |  409.046299ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/06/18 - 05:50:37 | 200 |       31.93µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:38 | 200 |   57.303865ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/18 - 05:50:40 | 200 |  2.497325496s |       127.0.0.1 | POST     "/api/generate"
+Job completed at Wed Jun 18 05:50:54 CEST 2025
+=================================================================
+Starting Experiment with:
+  Embedding: BAAI/bge-large-en-v1.5
+  LLM Model: gemma:7b
+  Story Model: gemma:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/06/18 - 05:50:54 | 200 |    1.780661ms |             ::1 | GET      "/api/tags"
+Ollama for RAG server is ready!
+[GIN] 2025/06/18 - 05:50:54 | 200 |     2.00546ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/06/18 - 05:50:54 | 200 |    1.519793ms |             ::1 | GET      "/api/tags"
+Ollama for VL-LLM server is ready!
+[GIN] 2025/06/18 - 05:50:54 | 200 |       28.22µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:55 | 200 |    444.0021ms |       127.0.0.1 | POST     "/api/pull"
+Ollama model -- qwen2.5vl:7b is downloaded!
+[GIN] 2025/06/18 - 05:50:55 | 200 |      28.259µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:55 | 200 |   46.521189ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/18 - 05:50:55 | 200 |   23.382164ms |       127.0.0.1 | POST     "/api/generate"
+[GIN] 2025/06/18 - 05:50:56 | 200 |       32.39µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:56 | 200 |  433.656461ms |       127.0.0.1 | POST     "/api/pull"
+Ollama RAG model is downloaded!
+[GIN] 2025/06/18 - 05:50:56 | 200 |       33.77µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:56 | 200 |   56.555889ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/18 - 05:50:57 | 200 |   27.923361ms |       127.0.0.1 | POST     "/api/generate"
+[GIN] 2025/06/18 - 05:50:57 | 200 |       32.56µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:57 | 200 |  394.901314ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/06/18 - 05:50:58 | 200 |       32.41µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/18 - 05:50:58 | 200 |   55.162815ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/18 - 05:50:58 | 200 |   28.506659ms |       127.0.0.1 | POST     "/api/generate"
+
+JOB STATISTICS
+==============
+Job ID: 12467623
+Cluster: snellius
+User/Group: jye/jye
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:22
+CPU Efficiency: 2.81% of 00:13:04 core-walltime
+Job Wall-clock time: 00:00:49
+Memory Utilized: 3.35 GB
+Memory Efficiency: 5.24% of 64.00 GB (64.00 GB/node)

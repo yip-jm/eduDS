@@ -1,0 +1,200 @@
+Starting job on gcn144.local.snellius.surf.nl at Tue Jun 24 15:48:09 CEST 2025
+Total CPUs allocated: 16
+Number of CPUs allocated by Slurm=8
+[INFO] ROOT_DIR set to /gpfs/home5/jye/dse
+Using python: /gpfs/home5/jye/.venv/bin/python
+apptainer version 1.4.1-1.el9
+Tue Jun 24 15:48:11 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100                    On  |   00000000:C6:00.0 Off |                    0 |
+| N/A   33C    P0             66W /  700W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking available executables inside Singularity:
+/sw/arch/RHEL8/EB_production/2023/software/cuDNN/8.9.2.26-CUDA-12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/nvvm/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/extras/CUPTI/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/Python/3.11.3-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/OpenSSL/3/lib:/sw/arch/RHEL8/EB_production/2023/software/libffi/3.4.4-GCCcore-12.3.0/lib64:/sw/arch/RHEL8/EB_production/2023/software/XZ/5.4.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/SQLite/3.42.0-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/Tcl/8.6.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/libreadline/8.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/ncurses/6.4-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/bzip2/1.0.8-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/binutils/2.40-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/zlib/1.2.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/GCCcore/12.3.0/lib64
+/usr/bin/ollama
+=================================================================
+Starting Experiment with:
+  RAG Model: gemma:7b
+  Story Model: dk
+=================================================================
+Starting Ollama server...
+[GIN] 2025/06/24 - 15:48:17 | 200 |    7.676759ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/06/24 - 15:48:17 | 200 |       32.14µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/24 - 15:48:18 | 200 |  686.296285ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/06/24 - 15:48:18 | 200 |      27.819µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/06/24 - 15:48:18 | 404 |    1.593001ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/06/24 - 15:48:18 | 200 |  350.233589ms |       127.0.0.1 | POST     "/api/pull"
+Running Python script with models: gemma:7b
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.754811ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.409752ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.410423ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.759251ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.513592ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.399052ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.378722ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.409173ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.394403ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.660391ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.523741ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.493792ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.720951ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.489532ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |     1.70636ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:38 | 404 |    1.473372ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:39 | 404 |    1.487762ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:39 | 404 |    1.631561ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:39 | 404 |    2.054149ms |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2025/06/24 - 15:48:39 | 404 |    1.683581ms |       127.0.0.1 | POST     "/api/chat"
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q09.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q16.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q05.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q04.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q11.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q18.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q17.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q06.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q13.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q20.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q12.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q01.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q19.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q08.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q15.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q07.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q14.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q03.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q10.md
+
+--- Starting Data Storytelling Pipeline ---
+
+[PIPELINE STEP 1/4] Generating Story Foundation...
+❌ ERROR in Step 1: Could not generate or parse story foundation. model "dk" not found, try pulling it first (status code: 404)
+    🟢 Story saved to: /gpfs/home5/jye/dse/result/gemma_7b/story_generation/dk/query1/story_q02.md
+Job completed at Tue Jun 24 15:48:40 CEST 2025
+All jobs completed at Tue Jun 24 15:48:40 CEST 2025
+
+JOB STATISTICS
+==============
+Job ID: 12596299
+Cluster: snellius
+User/Group: jye/jye
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:00:13
+CPU Efficiency: 2.03% of 00:10:40 core-walltime
+Job Wall-clock time: 00:00:40
+Memory Utilized: 722.07 MB
+Memory Efficiency: 2.20% of 32.00 GB (32.00 GB/node)

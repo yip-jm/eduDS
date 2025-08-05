@@ -1,0 +1,380 @@
+Starting job on gcn122.local.snellius.surf.nl at Wed Jul 23 03:42:41 CEST 2025
+Total CPUs allocated: 16
+Number of CPUs allocated by Slurm=8
+[INFO] ROOT_DIR set to /gpfs/home5/jye/dse
+Using python: /gpfs/home5/jye/.venv/bin/python
+apptainer version 1.4.1-1.el9
+Wed Jul 23 03:42:42 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100                    On  |   00000000:26:00.0 Off |                    0 |
+| N/A   32C    P0             66W /  700W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking available executables inside Singularity:
+/sw/arch/RHEL8/EB_production/2023/software/cuDNN/8.9.2.26-CUDA-12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/nvvm/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/extras/CUPTI/lib64:/sw/arch/RHEL8/EB_production/2023/software/CUDA/12.1.1/lib:/sw/arch/RHEL8/EB_production/2023/software/Python/3.11.3-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/OpenSSL/3/lib:/sw/arch/RHEL8/EB_production/2023/software/libffi/3.4.4-GCCcore-12.3.0/lib64:/sw/arch/RHEL8/EB_production/2023/software/XZ/5.4.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/SQLite/3.42.0-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/Tcl/8.6.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/libreadline/8.2-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/ncurses/6.4-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/bzip2/1.0.8-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/binutils/2.40-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/zlib/1.2.13-GCCcore-12.3.0/lib:/sw/arch/RHEL8/EB_production/2023/software/GCCcore/12.3.0/lib64
+/usr/bin/ollama
+=================================================================
+Starting Experiment with:
+  RAG Model: llama3.1:8b
+  Story Model: deepseek-llm:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:42:48 | 200 |    6.487567ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:42:48 | 200 |       27.52µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:42:49 | 200 |  501.246457ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:42:49 | 200 |       28.11µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:42:49 | 200 |   41.650974ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:42:54 | 200 |  4.557380839s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: llama3.1:8b
+Job completed at Wed Jul 23 03:43:17 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: llama3.1:8b
+  Story Model: gemma:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:43:22 | 200 |     5.68751ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:43:23 | 200 |       28.02µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:43:23 | 200 |  496.370195ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:43:24 | 200 |       45.71µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:43:24 | 200 |   61.533564ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:43:29 | 200 |  5.499248358s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: llama3.1:8b
+Job completed at Wed Jul 23 03:43:36 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: llama3.1:8b
+  Story Model: qwen2.5:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:43:41 | 200 |    4.523014ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:43:41 | 200 |      40.089µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:43:42 | 200 |  487.757035ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:43:42 | 200 |       32.61µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:43:42 | 200 |   42.238562ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:43:47 | 200 |  5.078200127s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: llama3.1:8b
+Job completed at Wed Jul 23 03:43:54 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: llama3.1:8b
+  Story Model: openchat:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:43:59 | 200 |     5.76054ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:44:00 | 200 |       34.29µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:44:00 | 200 |  476.953103ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:44:00 | 200 |       28.96µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:44:00 | 200 |   18.111676ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:44:05 | 200 |  4.123091865s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: llama3.1:8b
+Job completed at Wed Jul 23 03:44:12 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: llama3.1:8b
+  Story Model: llama3.1:8b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:44:17 | 200 |    3.251888ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:44:17 | 200 |       31.39µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:44:18 | 200 |  534.288131ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:44:18 | 200 |      25.749µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:44:18 | 200 |    45.54861ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:44:23 | 200 |  5.287835131s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: llama3.1:8b
+Job completed at Wed Jul 23 03:44:30 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: llama3.1:8b
+  Story Model: olmo2:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:44:35 | 200 |    4.540274ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:44:35 | 200 |       33.28µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:44:36 | 200 |  460.551521ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:44:36 | 200 |       31.68µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:44:36 | 200 |   27.801532ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:44:41 | 200 |  4.731330207s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: llama3.1:8b
+Job completed at Wed Jul 23 03:44:48 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: llama3.1:8b
+  Story Model: phi4:14b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:44:53 | 200 |    4.417965ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:44:53 | 200 |        27.7µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:44:54 | 200 |  474.673401ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:44:54 | 200 |       26.22µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:44:54 | 200 |   27.084065ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:45:03 | 200 |  9.250830462s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: llama3.1:8b
+Job completed at Wed Jul 23 03:45:11 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: olmo2:7b
+  Story Model: deepseek-llm:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:45:16 | 200 |    4.622173ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:45:16 | 200 |        32.6µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:45:17 | 200 |  474.974571ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:45:17 | 200 |       24.31µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:45:17 | 200 |     39.8509ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:45:19 | 200 |  2.533371135s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: olmo2:7b
+Job completed at Wed Jul 23 03:45:26 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: olmo2:7b
+  Story Model: gemma:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:45:31 | 200 |      5.7993ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:45:32 | 200 |       31.33µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:45:32 | 200 |  497.988669ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:45:32 | 200 |       27.76µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:45:33 | 200 |    56.87338ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:45:35 | 200 |  2.971958423s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: olmo2:7b
+Job completed at Wed Jul 23 03:45:42 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: olmo2:7b
+  Story Model: qwen2.5:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:45:47 | 200 |    5.015723ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:45:48 | 200 |       34.39µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:45:48 | 200 |  462.970372ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:45:48 | 200 |       24.08µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:45:49 | 200 |   37.430569ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:45:51 | 200 |  2.591177512s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: olmo2:7b
+Job completed at Wed Jul 23 03:45:58 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: olmo2:7b
+  Story Model: openchat:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:46:03 | 200 |    5.287921ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:46:03 | 200 |       37.49µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:46:04 | 200 |  485.166095ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:46:04 | 200 |       27.59µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:46:04 | 200 |   15.166817ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:46:06 | 200 |  2.116842909s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: olmo2:7b
+Job completed at Wed Jul 23 03:46:13 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: olmo2:7b
+  Story Model: llama3.1:8b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:46:18 | 200 |    4.463985ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:46:19 | 200 |       38.31µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:46:19 | 200 |  513.521005ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:46:20 | 200 |       33.39µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:46:20 | 200 |   42.264681ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:46:22 | 200 |  2.655998504s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: olmo2:7b
+Job completed at Wed Jul 23 03:46:29 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: olmo2:7b
+  Story Model: olmo2:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:46:34 | 200 |    5.497091ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:46:35 | 200 |       36.72µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:46:35 | 200 |  523.332581ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:46:35 | 200 |       31.44µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:46:35 | 200 |   27.899802ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:46:40 | 200 |  4.991256525s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: olmo2:7b
+Job completed at Wed Jul 23 03:46:48 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: olmo2:7b
+  Story Model: phi4:14b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:46:53 | 200 |    4.979462ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:46:54 | 200 |      43.969µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:46:54 | 200 |  484.490378ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:46:54 | 200 |       32.79µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:46:54 | 200 |   27.467064ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:46:58 | 200 |   3.24319855s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: olmo2:7b
+Job completed at Wed Jul 23 03:47:05 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: phi4:14b
+  Story Model: deepseek-llm:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:47:10 | 200 |     5.63793ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:47:10 | 200 |       28.36µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:47:10 | 200 |  471.871943ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:47:11 | 200 |       25.82µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:47:11 | 200 |   38.219535ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:47:15 | 200 |  4.537123646s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: phi4:14b
+Job completed at Wed Jul 23 03:47:23 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: phi4:14b
+  Story Model: gemma:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:47:28 | 200 |    6.524177ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:47:28 | 200 |       39.83µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:47:29 | 200 |  451.805694ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:47:29 | 200 |        31.3µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:47:29 | 200 |   55.930043ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:47:35 | 200 |  5.736579134s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: phi4:14b
+Job completed at Wed Jul 23 03:47:42 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: phi4:14b
+  Story Model: qwen2.5:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:47:47 | 200 |    4.945603ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:47:47 | 200 |      30.139µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:47:48 | 200 |  464.657768ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:47:48 | 200 |        25.2µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:47:48 | 200 |   40.231649ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:47:53 | 200 |  5.317853854s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: phi4:14b
+Job completed at Wed Jul 23 03:48:00 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: phi4:14b
+  Story Model: openchat:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:48:05 | 200 |    5.102972ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:48:06 | 200 |       35.07µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:48:06 | 200 |  452.345432ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:48:07 | 200 |       26.19µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:48:07 | 200 |   15.282707ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:48:11 | 200 |  4.375288904s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: phi4:14b
+Job completed at Wed Jul 23 03:48:18 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: phi4:14b
+  Story Model: llama3.1:8b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:48:23 | 200 |    4.529714ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:48:24 | 200 |      28.439µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:48:24 | 200 |  456.736936ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:48:24 | 200 |       38.69µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:48:24 | 200 |   41.703983ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:48:30 | 200 |  5.896283053s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: phi4:14b
+Job completed at Wed Jul 23 03:48:38 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: phi4:14b
+  Story Model: olmo2:7b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:48:43 | 200 |    4.603204ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:48:43 | 200 |       37.56µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:48:44 | 200 |  476.891046ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:48:44 | 200 |        31.4µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:48:44 | 200 |   26.381107ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:48:47 | 200 |  3.487192643s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: phi4:14b
+Job completed at Wed Jul 23 03:48:54 CEST 2025
+=================================================================
+Starting Experiment with:
+  RAG Model: phi4:14b
+  Story Model: phi4:14b
+=================================================================
+Starting Ollama server...
+[GIN] 2025/07/23 - 03:49:00 | 200 |     5.62412ms |             ::1 | GET      "/api/tags"
+Ollama for SYLLM server is ready!
+[GIN] 2025/07/23 - 03:49:00 | 200 |       27.86µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:49:00 | 200 |  460.905251ms |       127.0.0.1 | POST     "/api/pull"
+Ollama SYLLM model is downloaded!
+[GIN] 2025/07/23 - 03:49:01 | 200 |          33µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2025/07/23 - 03:49:01 | 200 |   27.913342ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2025/07/23 - 03:49:09 | 200 |  8.744175271s |       127.0.0.1 | POST     "/api/generate"
+Running Python script with models: phi4:14b
+Job completed at Wed Jul 23 03:49:17 CEST 2025
+All jobs completed at Wed Jul 23 03:49:17 CEST 2025
+
+JOB STATISTICS
+==============
+Job ID: 13258807
+Cluster: snellius
+User/Group: jye/jye
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 00:05:32
+CPU Efficiency: 5.12% of 01:48:00 core-walltime
+Job Wall-clock time: 00:06:45
+Memory Utilized: 4.18 GB
+Memory Efficiency: 13.08% of 32.00 GB (32.00 GB/node)

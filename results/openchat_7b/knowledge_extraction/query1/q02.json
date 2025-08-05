@@ -1,0 +1,67 @@
+{
+  "Question": "Design instructional content on virtualization, emphasizing the operational principles of full, para-, and hardware-supported virtualization, including a breakdown of hypervisor types and associated performance trade-offs.",
+  "Knowledge_Topic": "Virtualization",
+  "Core_Concepts": [
+    {
+      "Concept": "Operating system level virtualisation",
+      "Definition": "Uses isolation mechanisms to provide users with virtual environments similar to a dedicated server.",
+      "Key_Points": [
+        "Isolates users in virtual environments similar to a dedicated server.",
+        "Requires the guest operating system to be modified to use a set of hooks to improve machine execution simulation."
+      ],
+      "Significance_Detail": "Operating system level virtualisation is important because it allows multiple users to run their own isolated environments on the same physical hardware, increasing resource utilization and efficiency.",
+      "Strengths": "This type of virtualisation can improve security by isolating user environments from each other.",
+      "Weaknesses": "The guest operating system needs to be modified, which may introduce compatibility issues."
+    },
+    {
+      "Concept": "Para-virtualization",
+      "Definition": "Requires the guest operating system to be modified to use a set of hooks to improve machine execution simulation – Para-virtualisation enabled by Type1 Hypervisor.",
+      "Key_Points": [
+        "Guest operating system is modified to use hooks for improved machine execution simulation.",
+        "Enabled by Type1 Hypervisor."
+      ],
+      "Significance_Detail": "Para-virtualization is important because it allows the guest operating system to be more compatible with the underlying hardware, reducing performance overhead.",
+      "Strengths": "This type of virtualisation can improve performance by using hooks for improved machine execution simulation.",
+      "Weaknesses": "The guest operating system needs to be modified, which may introduce compatibility issues."
+    },
+    {
+      "Concept": "Full virtualization",
+      "Definition": "Fully simulates all the hardware of the underlying device by providing a virtual machine.",
+      "Key_Points": [
+        "Simulates all the hardware of the underlying device.",
+        "Provides a virtual machine."
+      ],
+      "Significance_Detail": "Full virtualization is important because it allows any operating system to run on the virtual machine without modification, providing greater flexibility and compatibility.",
+      "Strengths": "This type of virtualisation can support a wide range of guest operating systems without modification.",
+      "Weaknesses": "Full virtualization may have higher performance overhead compared to other types of virtualisation."
+    }
+  ],
+  "Overall_Summary": "Virtualization is the process of creating isolated environments on a single physical hardware, allowing multiple users or applications to run simultaneously. Operating system level virtualization, para-virtualization, and full virtualization are different approaches to achieve this goal, each with their own strengths and weaknesses.",
+  "Source_Context": [
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "(1) Operating system level virtualisation - uses isolation mechanisms to provide users with virtual environments similar to a dedicated server. (2) Para-virtualisation - requires the guest operating system to be modified to use a set of hooks to improve machine execution simulation – Para-virtualisation enabled by Type1 Hypervisor (3) Full virtualisation fully simulates all the"
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "is important and a hosted hypervisor has a much higher inherent virtualisation cost due to the need for the VMM to go through many more layers of software31. The performance of native, bare-metal hypervisors, (since they run on the 'bare-metal' of the hardware) is generally much better than that of hosted hypervisors. # 3.2 Full-virtualisation32"
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "machine execution simulation – Para-virtualisation enabled by Type1 Hypervisor (3) Full virtualisation fully simulates all the hardware of the underlying device by providing a virtual machine)"
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "Virtualisation ... ..9   \n3.1 Operating system level virtualisation (Nonvirtualizable vs virtualizable instruction) . .9   \n3.2 Full-virtualisation ..... .10   \n3.3 Para-virtualisation,, .. 11   \n3.4 Hardware supported virtualisation ... .11   \n3.5 Memory virtualisation . .12   \n3.6 Device and I/O Virtualisation ... .12   \n4."
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "paravirtualization in which a single binary version of the operating system can run either on native hardware or on a hypervisor in para-virtualized mode. As AMD and Intel CPUs added support for more efficient hardware-assisted virtualization, the standard became obsoleted and VMI support was removed from Linux kernel in $2 . 6 . 3 7$ and from VMware products in $2 0 1 1 ^ { \\circ"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+
+JOB STATISTICS
+==============
+Job ID: 13288895
+Cluster: snellius
+User/Group: jye/jye
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:00:00 core-walltime
+Job Wall-clock time: 00:00:00
+Memory Utilized: 0.00 MB
+Memory Efficiency: 0.00% of 32.00 GB (32.00 GB/node)

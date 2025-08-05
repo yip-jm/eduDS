@@ -1,0 +1,2 @@
+FATAL:   Image file already exists: "ollama_latest.sif" - will not overwrite
+slurmstepd: error: *** JOB 12596336 ON gcn147 CANCELLED AT 2025-06-24T15:51:39 ***
