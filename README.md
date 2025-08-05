@@ -1,21 +1,19 @@
 # Small Language Models for Educational Data Storytelling
-
+This project is an advanced AI-driven content generation system designed to transform unstructured educational materials, such as PDF documents, into structured and engaging lesson packages. It transcends a standard RAG (Retrieval-Augmented Generation) system by implementing a complete "Knowledge-to-Curriculum" pipeline, centered around a unique Data Storytelling Engine.
 
 ## Key Features
-
-- PDF parsing with structured Markdown conversion
-- Hybrid retrieval (semantic embedding + BM25)
-- Context aggregation across documents
-- Integration with local LLMs (via Ollama)
-- Supports narrative-driven data storytelling
+- Converts PDF files into Markdown
+- Advanced Hybrid Retrieval (BM25 + vector search)
+- Structured Knowledge Extraction (based on RAG)
+- Data Storytelling & Lesson Generation (Lesson Plan Outline -> Core Concept Story Module -> Interactive Activity Module)
+- Modular and Extensible
 
 ## System Architecture & Workflow
+[Raw PDF] -> [Stage 1: Preprocessing] -> [Stage 2: Knowledge Extraction] -> [Structured Knowledge JSON] -> [Stage 3: Lesson Generation] -> [Complete Lesson Package]
 
-### Document Preprocessing & Content Enhancement 
+
 1. PDF to Markdown: [MinerU](https://github.com/opendatalab/MinerU)
-
 2. RAG-based Knowledge Extraction
-
 3. Data Stotytelling Pipeline
 
 ## Installation
@@ -42,10 +40,8 @@ pip install -r requirements.txt
 
 ## How to Use
 
-1. Place your  files (**md format**) in the `/docs/materials_md/parsed` directory.
-
+1. Place your  files (**markdown format**) in the `/docs/materials_md/parsed` directory.
 2. Place query (**JSON format**) in the`/docs/query`.
-
 3. Run the script from your terminal:
     ```
     sbatch run_ke.sh
