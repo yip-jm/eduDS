@@ -1,6 +1,12 @@
 # Small Language Models for Educational Data Storytelling
 This project is an advanced AI-driven content generation system designed to transform unstructured educational materials, such as PDF documents, into structured and engaging lesson packages. It transcends a standard RAG (Retrieval-Augmented Generation) system by implementing a complete "Knowledge-to-Curriculum" pipeline, centered around a unique Data Storytelling Engine.
 
+## Graduation Project
+
+This repository is part of my graduation project at [Your University Name].
+
+The final thesis PDF can be found [here](./thesis.pdf).
+
 ## Key Features
 - Converts PDF files into Markdown
 - Advanced Hybrid Retrieval (BM25 + vector search)
