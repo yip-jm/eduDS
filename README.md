@@ -5,7 +5,7 @@ This project is an advanced AI-driven content generation system designed to tran
 
 This repository is part of my graduation project at [Your University Name].
 
-The final thesis PDF can be found [here](./thesis.pdf).
+The final thesis PDF can be found [here](./Thesis.pdf).
 
 ## Key Features
 - Converts PDF files into Markdown
