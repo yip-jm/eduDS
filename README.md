@@ -3,7 +3,7 @@ This project is an advanced AI-driven content generation system designed to tran
 
 ## Graduation Project
 
-This repository is part of my graduation project at [Your University Name].
+This repository is part of my graduation project at VU & UvA.
 
 The final thesis PDF can be found [here](./Thesis.pdf).
 
