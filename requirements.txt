@@ -1,0 +1,15 @@
+langchain
+langchain-experimental
+langchain-huggingface
+langchain-community
+langchain-ollama
+sentence-transformers
+transformers>=4.30.0
+torch>=2.0.0
+huggingface-hub
+chromadb>=0.4.0,<0.5.0
+pypdf
+rank_bm25
+accelerate
+ollama
+numpy==1.26
