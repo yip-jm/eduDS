@@ -6,7 +6,7 @@
 | | Accuracy | Measures correctness of all key facts, concepts, and definitions | 0-5 | - |
 | | Completeness | Evaluates if all required aspects of the question are addressed (e.g., definition, significance, strengths, weaknesses) | 0-5 | - |
 | | - | Composite score of faithfulness, accuracy, and completeness | 0-5 | (Faithfulness + Accuracy + Completeness) / 3 |
-| Overall Score | - | Weighted sum of retrieval and generation scores | 0-5 | 0.4*Retrieval Score + 0.6*Generation Score |
+| Overall Score | - | Weighted sum of retrieval and generation scores | 0-5 | 0.4\*Retrieval Score + 0.6\*Generation Score |
 
 ---
 
