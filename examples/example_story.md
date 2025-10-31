@@ -1,4 +1,4 @@
-```markdown
+
 # Lesson Title: Understanding Virtualization Techniques in Computer Architecture
 
 ## Introduction (Hook)
@@ -23,7 +23,7 @@ Objective: To reinforce learning through an interactive segment.
 Objective: To wrap up the lesson by connecting back to the Overall Summary.
 
 - *Conclusion:* By understanding how full virtualization fully isolates environments, para-virtualization enhances efficiency through OS modifications, and hardware-supported virtualization leverages CPU capabilities for better performance, we can effectively implement and manage virtualized systems. Hypervisors play a crucial role in managing these environments.
-```
+
 
 This lesson plan outline provides a clear structure that teachers can follow to deliver comprehensive lessons on the different types of virtualization techniques within computer architecture.
 
@@ -253,3 +253,4 @@ From the perspective of an engineer facing a challenge.
 - **Type 2 Hypervisor:** Alternatively, students might suggest a Type 2 hypervisor if they prioritize ease of use and security over performance. They could discuss how it simplifies management and reduces complexity but at the expense of slightly lower performance.
 
 This scenario encourages critical thinking about real-world trade-offs in IT decision-making.
+
