@@ -1,0 +1,46 @@
+{
+  "Question": "Describe cloud-native architecture, including microservices, containers, orchestration layers, and how the CNCF defines the cloud-native stack, with real-world applications from companies like Netflix and Uber.",
+  "Knowledge_Topic": "Cloud-Native Architecture",
+  "Core_Concepts": [
+    {
+      "Concept": "Microservices",
+      "Definition": "An architectural style that structures an application as a collection of loosely coupled services.",
+      "Key_Points": [
+        "Each microservice is independently deployable, scalable, and can be developed by small teams.",
+        "They communicate through APIs, enabling faster deployment cycles and easier maintenance.",
+        "Microservices reduce the complexity of large monolithic applications."
+      ],
+      "Significance_Detail": null,
+      "Strengths": null,
+      "Weaknesses": null
+    }
+  ],
+  "Overall_Summary": "Cloud-native architecture is characterized by the use of microservices, containers, and orchestration layers, as defined by the CNCF. This architecture supports continuous deployment, elastic scaling, and faster feature introduction, exemplified by real-world applications from companies like Netflix and Uber.",
+  "Source_Context": [
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "services79. Cloud-Native can be described as an amalgamation of best practices that have been seen from companies such as Netflix, Twitter, Alibaba, Uber, Facebook and alike. Practices include, but are not limited to, continuous deployment, containers and microservices to help achieve the elastic scaling capabilities, speed of introducing new functionality and increased automation"
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "Cloud-Native Computing Foundation (CNCF) 80 was created to help building a “sustainable ecosystems and fosters a community around a constellation of high-quality projects that orchestrate containers as part of a microservices architecture”. CNCF tries to define a CloudNative reference Architecture as a four-layer architecture covering the infrastructure, the provisioning, the"
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "Cloud-Native .."
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "architecture covering the infrastructure, the provisioning, the runtime, and the orchestration. CNCF aims to identify the ecosystems and fosters a community around a constellation of high-quality projects along the Cloud-Native reference Architecture stack CNCF role is in open source community is to foster the growth of the ecosystem, promote the technologies, and make the"
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "Cloud-Native"
+    }
+  ]
+}

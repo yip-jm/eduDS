@@ -88,7 +88,7 @@ echo "Job is running on compute node: ${HOSTNAME}"
 echo "Streamlit will run on port:   ${STREAMLIT_PORT}"
 echo ""
 echo "STEP 1: From your LOCAL machine, open a NEW terminal and run this command:"
-echo "ssh -L 8501:${HOSTNAME}:${STREAMLIT_PORT} <user_name>@snellius.surf.nl"
+echo "ssh -L 8501:${HOSTNAME}:${STREAMLIT_PORT} jye@snellius.surf.nl"
 echo ""
 echo "STEP 2: After the tunnel is active, open your web browser and go to:"
 echo "http://localhost:8501"
@@ -99,7 +99,7 @@ echo ""
 
 # --- 6. Run the Streamlit Application ---
 # The script will now wait here until Streamlit is closed or the job is cancelled.
-streamlit run /home/eduDS/apptest/src/app.py \
+streamlit run /home/jye/apptest/src/app.py \
   --server.port ${STREAMLIT_PORT} \
   --server.headless true \
   --server.address 0.0.0.0 \

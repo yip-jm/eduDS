@@ -45,7 +45,7 @@ def main(rag_model: str):
     if os.path.exists(persist_dir):
         shutil.rmtree(persist_dir, ignore_errors=True)
 
-    # 初始化 RAG
+    # Initialize RAG
     rag = EnhancedRAG(
         embedding_model_name=embedding_model,
         model_name=rag_model,
@@ -84,13 +84,13 @@ def main(rag_model: str):
                 knowledge_base, final_json = reconstruct_specific_json(parsed_data)
                 # safe_json = sanitize_json_string(final_json)
                 print(f"    🟢 Safe JSON: {final_json}")
-                answer_json = json.loads(final_json)  # 确保 JSON 字符串是合法的
+                answer_json = json.loads(final_json)  # validation of JSON
             except Exception as e:
                 print(f"  main.py ⚠️ Error: {e}")
                 
 
-            # 输出为 /results/ques1/q1.json
-            output_filename = f"q{idx + 1:02d}.json"  # 如 q01.json
+            # output example: /results/ques1/q1.json
+            output_filename = f"q{idx + 1:02d}.json"  # e.g. q01.json
             output_file_path = os.path.join(output_subdir_ke, output_filename)
 
             with open(output_file_path, "w", encoding="utf-8") as f_out:

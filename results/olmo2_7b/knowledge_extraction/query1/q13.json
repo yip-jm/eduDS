@@ -1,0 +1,33 @@
+{
+  "Question": "Build a lecture covering key cloud security topics including the division of security responsibilities, IAM frameworks, data safeguarding in different service models, and auditing tools such as AWS Trusted Advisor.",
+  "Knowledge_Topic": "Cloud Security",
+  "Core_Concepts": [],
+  "Overall_Summary": "Cloud security involves dividing security responsibilities between users and providers, implementing IAM frameworks for access control, ensuring data is safeguarded across various cloud service models, and utilizing auditing tools like AWS Trusted Advisor to enhance security.",
+  "Source_Context": [
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "Cloud security ....."
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "in the security lecture it is clear the data is never the responsibility of the providers in all three Cloud offerings. Data owners take the responsibility to secure their data by following security best practices54 and purchasing/lease security services offered by their providers like identify management and access control55,56. Cloud provider provides the basic blocks to build"
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "The Cloud responsibility diagram we showed many times in the lectures defines the responsibility between the user and the provider for the three major offerings of the Cloud (IaaS, Pass, and SaaS). The security aspects are part of the responsibilities of each role. In the version of the reasonability diagram presented in the security lecture it is clear the data is never the"
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "Cloud security\n\nCloud security is not limited to secure the infrastructure against attacks, it covers securing Cloud again configuration error, appliance to national and international regulations regarding the privacy of data and users Identity. It will be rater naïve to try to push the Cloud privacy to the providers’ side."
+    },
+    {
+      "source": "docs/materials_md/parsed/lecture.md",
+      "content_type": "normal",
+      "page_content": "In practice, Cloud security is shared between infrastructure providers, the service providers, and the user of the Cloud. It is only when security requirements at the three levels (infrastructure, service, and users) are satisfied that we can talk about a secure Cloud environment (even if $100 \\%$ security does not exist). Provider based security model involves SLA between provider"
+    }
+  ]
+}
